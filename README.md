@@ -81,7 +81,7 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 
 I *want* you to come to office hours! My office hours are:
 
-Time: Tues / Thurs 3:00-3:50PM
+Time: Tues 3:00-3:50PM / Thurs 5:30-6PM
 Location: Kiely Hall 604 (my office)
 
 ## Grades and Class Standing
