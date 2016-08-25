@@ -29,8 +29,8 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 * Lecture 5 [(audio)](https://clyp.it/g3ragjsg) [(Katherine Sandoval)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec05ks.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec05kap.pdf)
 * Lecture 4 [(Salma Ismail)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec04si.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec04kap.pdf)
 * Lecture 3 [(Qingyun Ni)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec03qn.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec03kap.pdf)
-* Lecture 2 [(Qingyun Ni)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02qn.pdf) [(Gabriel Campos)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02gc.pdf)   [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kap.pdf)
-* Lecture 1 [(Gabriel Campos)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01gc.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kap.pdf)-->
+* Lecture 2 [(Qingyun Ni)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02qn.pdf) [(Gabriel Campos)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02gc.pdf)   [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kap.pdf)-->
+* Lecture 1 [(audio)](https://clyp.it/kiswrrvq) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kap.pdf)
 
 ## Homeworks
 
