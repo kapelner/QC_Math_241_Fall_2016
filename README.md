@@ -31,7 +31,7 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 * Lecture 3 [(Qingyun Ni)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec03qn.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec03kap.pdf)
 * Lecture 2 [(Qingyun Ni)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02qn.pdf) [(Gabriel Campos)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02gc.pdf)   [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kap.pdf)-->
 * Lecture 2 [(audio)](https://clyp.it/gzusypnl) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kap.pdf)
-* Lecture 1 [(audio)](https://clyp.it/kiswrrvq) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kap.pdf)
+* Lecture 1 [(audio)](https://clyp.it/kiswrrvq) [(ZhaoHua Tan)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01tan.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kap.pdf)
 
 
 ## Homeworks
