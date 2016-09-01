@@ -29,8 +29,8 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 * Lecture 5 [(audio)](https://clyp.it/g3ragjsg) [(Katherine Sandoval)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec05ks.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec05kap.pdf)
 * Lecture 4 [(Salma Ismail)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec04si.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec04kap.pdf)-->
 * Lecture 3 [(audio)](https://clyp.it/cqxbt3ez) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec03kap.pdf)
-* Lecture 2 [(audio)](https://clyp.it/gzusypnl) [(Andrew Kwak)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kwak.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kap.pdf)
-* Lecture 1 [(audio)](https://clyp.it/kiswrrvq) [(Andrew Kwak)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kwak.pdf) [(ZhaoHua Tan)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01tan.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kap.pdf)
+* Lecture 2 [(audio)](https://clyp.it/gzusypnl) [(Monique Tang)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02tang.pdf) [(Andrew Kwak)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kwak.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec02kap.pdf)
+* Lecture 1 [(audio)](https://clyp.it/kiswrrvq) [(Monique Tang)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01tang.pdf) [(Andrew Kwak)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kwak.pdf) [(ZhaoHua Tan)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01tan.pdf) [(Prof)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/lectures/lec01kap.pdf)
 
 
 ## Homeworks
