@@ -2,13 +2,8 @@
 
 \include{preamble}
 
-\newtoggle{spacingmode}
-\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
-
 \newtoggle{professormode}
 \toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
-
-\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
 
 
 
@@ -69,6 +64,7 @@ NAME: \line(1,0){240} ~~SECTION (A or B): \line(1,0){35}
 \begin{enumerate}
 \easysubproblem{Viewing all the marbles as \textit{unique}, how many ways are there to order the marbles? Note that \qu{order} is another way of saying \qu{permute.}}\spc{2}
 
+
 \intermediatesubproblem{Viewing all marbles of the same color as \textit{interchangeable}, how many ways is there to order the marbles?}\spc{2}
 
 \extracreditsubproblem{If I pick 4 marbles at random from the collection, how many ways are there to get two-of-a-kind \ie two marbles of one color and two marbles of a different color.}\spc{7}
@@ -92,7 +88,7 @@ NAME: \line(1,0){240} ~~SECTION (A or B): \line(1,0){35}
 
 \intermediatesubproblem{Five cards are drawn. What is the probability of having 3 reds and 2 blues without regards to any order of the cards?} \spc{2}
 
-\hardsubproblem{Five cards are drawn. What is the probability of having 3 reds and 2 blues in that order? Think carefully about the numerator and denominator in this probability computation.} \spc{4}
+\hardsubproblem{Five cards are drawn. What is the probability of having 3 reds and 2 blues in that order? Think carefully about the numerator and denominator in this probability computation.} \spc{5}
 
 \intermediatesubproblem{Five cards are drawn from a new bag with 100 cards where 60 are blue and 40 are red. What is the probability of having 3 reds and 2 blues without regards to any order of the cards?} \spc{3}
 
@@ -138,7 +134,7 @@ NAME: \line(1,0){240} ~~SECTION (A or B): \line(1,0){35}
 \eeqn}
 \spc{4}
 
-\hardsubproblem{Use the expression in (c) to approximate the probability of getting 300 Heads in 1500 coin flips.} \spc{6}
+\hardsubproblem{Use the expression in (c) to approximate the probability of getting 300 Heads in 1500 coin flips.} \spc{10}
 
 \end{enumerate}
 
@@ -164,7 +160,7 @@ Explain why the 6 in the middle of the $n=4$ row is equivalent to $\binom{4}{2}$
 
 \easysubproblem{In the expansion $(a+b)^{100}$, how many terms are of the form $a^2 b^{98}$?} \spc{1}
 
-\extracreditsubproblem{Prove the binomial theorem for arbitrary $n \in \naturals$.} \spc{9}
+\extracreditsubproblem{Prove the binomial theorem for arbitrary $n \in \naturals$.} \spc{10}
 
 \end{enumerate}
 
@@ -297,6 +293,9 @@ From the title of the plot and the x and y axes, tell a story about what is goin
 \extracreditsubproblem{Explain why the three conditions are not technically axioms.} \spc{2}
 
 %\easysubproblem{Prove that if $A_1$ and $A_2$ are disjoint (mutually exclusive), $\prob{A_1 \cup A_2} = \prob{A_1} + \prob{A_2}$.} \spc{1.5}
+\end{enumerate}
+
+\end{document}
 
 \easysubproblem{Prove that $\prob{\varnothing} = 0$.} \spc{2.5}
 
