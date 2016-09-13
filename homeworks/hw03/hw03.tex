@@ -1,0 +1,215 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 241 Fall 2016 Homework \#3}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due 3PM KY270, Tuesday, September 20, 2016 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, read the section about foundations of probability in Chapter 2 and the section about conditional probability and in/dependence in Chapter 3 in Ross. Chapter references are from the 7th edition.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
+
+Up to 15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, upload \texttt{hwxx.tex} and \texttt{preamble.tex}, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. I do not accept homeworks not on this printout. Keep this first page printed for your records. Write your name and section below (A or B).
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){240} ~~SECTION (A or B): \line(1,0){35}
+
+}
+\pagebreak
+
+\iftoggle{professormode}{
+\paragraph{Mathematical Theory} We will get our feet wet with basic \qu{axioms} and theorems. \\ \\
+}
+
+\problem{Assume all capital letters are sets. If the problem asks you to prove a fact, you may only use your knowledge of set theory and the definition of $\prob{\cdot}$ given in the book / lecture. Most of the answers are in the book or in my lecture notes. Try to do them yourself and only use the book if you are having trouble.}
+
+\begin{enumerate}
+\easysubproblem{Prove that $\prob{\varnothing} = 0$.} \spc{2.5}
+
+\intermediatesubproblem{Prove that $\prob{A} \leq 1$.} \spc{5}
+
+\intermediatesubproblem{Assuming the previous theorem that $\prob{A} \leq 1$, prove that $\prob{A} \in \zeroonecl$.} \spc{2}
+
+\hardsubproblem{Prove that if $A \subset B$ then $\prob{A} \leq \prob{B}$ which is a tiny bit different from what I did in class.} \spc{3.5}
+
+%\hardsubproblem{Prove the law of inclusion-exclusion for two arbitrary sets: $\prob{A \cup B} = \prob{A} + \prob{B} - \prob{A, B}$ (in the notes).} \spc{5}
+
+%\intermediatesubproblem{State the general law of inclusion-exclusion for arbitrary $n$ i.e. $\prob{\cup_{i=1}^n A_i} = $ ?} \spc{2}
+
+\extracreditsubproblem{On a separate sheet of paper, prove the general law of inclusion-exclusion i.e. $\prob{\cup_{i=1}^n A_i} = \ldots$}
+
+\hardsubproblem{Some authors write $\prob{A} \in \zeroonecl$ insetad of the condition hich we did in class, $\prob{A} \geq 0 ~\forall A$. Why is this addition detail (of being probability being $\leq 1$) unncessary? Hint: see (d).} \spc{3}
+
+\hardsubproblem{Prove that if $A = \braces{\omega_1, \omega_2, \ldots}$, then
+
+\beqn
+\prob{A} = \sum_{i=1}^\infty \prob{\braces{\omega_i}}
+\eeqn} \spc{4}
+
+\end{enumerate}
+
+
+\problem{Assume that the overall probability of contracting breast cancer in a 45 year old American woman is 0.1\% on average (or one in a thousand). A typical diagnostic test is a mammographic scane. Assume also that a mammograph scan reading is 82\% \textit{sensitive} on average and 96\% \textit{specific} on average. Here, \qu{sensitive} means among patients with cancer, the probability that the test is positive and \qu{specific} means among patients without cancer, the probability that the test is negative.}
+
+
+\begin{enumerate}
+\easysubproblem{Denote cancer as $C$ and no cancer as $C^C$ and mammography positive as $T$ and mammography negative as $T^C$. What is $\prob{C}$, $\cprob{T}{C}$ and $\cprob{T^C}{C^C}$? These are readable from the problem statement above. You must use this notation going forward to get full credit.}\spc{1}
+
+\easysubproblem{Now solve for $\prob{C^C}$, $\cprob{T^C}{C}$ and $\cprob{T}{C^C}$ using the complement rule.}\spc{2}
+
+\easysubproblem{Draw a tree with two branches: $C$ vs. $C^C$ and then draw a second set of branches for $T$ vs. $T^C$ (four branches). Mark all four conditional probabilities in this tree's configuration and all four marginal probabilities on the right. Check your answers by assuring that these four marginal probabilities form a partition of $\prob{\Omega} = 1$.}\spc{9}
+
+\easysubproblem{Draw the \qu{inverted} tree. It has two branches: $T$ vs. $T^C$ and then a second set of branches for $C$ vs. $C^C$ (four branches). Mark all four conditional probabilities in this tree's configuration and all four marginal probabilities on the right. Check your answers by assuring that these four marginal probabilities form a partition of $\prob{\Omega} = 1$.}\spc{9}
+
+\easysubproblem{Draw $\Omega$ as a rectange (that takes up the whole width of the page) with $T$ and $C$ inside. Try to draw to scale.}\spc{4}
+
+
+\intermediatesubproblem{What is $\prob{T}$? Use the law of total probability here and explain what the law is and how exactly you're using it to solve this problem.}\spc{7}
+
+
+
+\hardsubproblem{What does $\prob{T}$ mean? Answer \textit{in English}.}\spc{3}
+
+\intermediatesubproblem{Now the money question: if a woman is scanned and tests positive, what is the probability she has cancer? Use the notation I have provided and answer as a \textit{percentage} so it is more viscerally interpretable to you. Do not be alarmed if the answer surprises you.}\spc{3}
+
+\intermediatesubproblem{You may have done the previous question over and over and gotten frustrated. Your answer is probably correct though. Can you explain why it's so low? Comment on the usefulness of mammography given the post test probability of cancer which you computed.}\spc{4}
+
+\easysubproblem{Prove through the rules in class that $\prob{T} = \prob{C,T} + \cprob{T}{C^C}\prob{C^C}$. This is the denominator that is making part (g) so small.}\spc{4}
+
+\intermediatesubproblem{You have shown that $\prob{C,T}$ is trivially small but $\prob{C^C}$ is huge. So what is in actuality driving the low answer in (g)?}\spc{4}
+
+\intermediatesubproblem{If a woman is scanned and tests positive, what is the probability she does \textit{not} have cancer?}\spc{3}
+
+\intermediatesubproblem{If a woman is scanned and tests negative, what is the probability she does \textit{not} have cancer?}\spc{5}
+
+\intermediatesubproblem{What is the ratio of $\frac{\cprob{C}{T}}{\cprob{C}{T^C}}$? What does this ratio mean? What does your answer suggest? Is it possible these scans aren't such a terrible diagnostic tool after all? }\spc{8}
+
+\end{enumerate}
+
+\problem{We will follow up here with questions on the Monte Hall game.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.9in]{montehall.jpg}
+\end{figure}
+\FloatBarrier
+\vspace{-0.7cm}
+}}
+
+\begin{enumerate}
+
+%\easysubproblem{Explain clearly how the gameshow is played --- all the rules of the host and the contestant.}\spc{4}
+
+
+\intermediatesubproblem{In class, we used a tree to show the probability of winning is 2/3 if you switch and the car was in door 1. Complete the tree for if the car was in all doors initially and show the probability of winning is 2/3. It will take the whole page.}\spc{14}
+
+%\hardsubproblem{Now imagine a variant of the game is played in the following way: there are four doors, you pick one and the game show host opens up two doors to reveal two goats. You now have the option to keep the door you selected initially or switch to the other door that remains closed. Use Bayes Theorem (not a tree). We will do this in class next Thursday.}\spc{10}
+
+\extracreditsubproblem{Imagine the variant where there are now $n$ doors. You choose 1 and the game show host opens up $n-2$ doors to reveal $n-2$ goats. You have the option to keep the door you selected initially or switch to the other closed door. What is the probability of winning if you switch?}\spc{10}
+
+\end{enumerate}
+
+\problem{New York is a \qu{concrete jungle where dreams are made of.} To this extent, a young upstart tries to drum up business in three of the tallest buildings in the city. Below from left to right are pictured One World Trade Center (104 floors), the Empire State Building (82 occupied floors) and the Bank of America Tower (55 floors).
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{buildings.png}
+\end{figure}
+\FloatBarrier
+}
+
+\noindent Consider the case where this person enters one of the three buildings randomly and goes to a random floor.}
+
+ 
+
+\begin{enumerate}
+\easysubproblem{Draw a probability tree of this random event. Use ``...'' notation so you don't need to draw hundreds of lines.}\spc{12}
+
+\easysubproblem{Are the building selection and floor selection \textit{independent} (\ie \textit{informationally irrelevant})? Justify your answer using the definition of statistical independence.}\spc{0.5}
+
+\easysubproblem{What is the probability of the businessman winding up on floor 23 of One World Trade Center on a given day? }\spc{5}
+
+\intermediatesubproblem{What is the probability of the businessman winding up on floor 23 of any building on a given day? }\spc{3}
+
+\hardsubproblem{If the businessman is on floor 50, what is the probability he is in the Bank of America Tower? }\spc{3}
+
+\extracreditsubproblem{In one week, the businessman was on floor 12, 15 18, 32 and 59. What is the probability he visited One World Trade Center for more than one of those days? }\spc{6}
+
+\end{enumerate}
+
+
+
+\problem{Probability is rooted in gambling and thus we will be analyzing some gambling games. We will introduce the game of Roulette here. Basically, there's a ball that is dropped onto a spinning wheel with pockets for the ball to fall once the wheel and ball run out of momentum. There are 18 red pockets and 18 black pockets. There are two flavors of the game:
+
+\begin{itemize}
+\item European: There is one additional pocket colored green and labeled 0 (for a total of 18+18+1=37 pockets). An example of this wheel is pictured below on the left.
+\item American: There are two additional pockets colored green labeled 0 and 00 (for a total of 18+18+2=38 pockets). An example of this wheel is pictured below on the right.
+\end{itemize}
+
+The gambler can make bets on any of the spaces as well as red (R), black (B), green (G), an odd number, an even number and a slew of other exotic type bets which we won't enumerate. We will be analyzing payoffs when we get to random variables next week but we will not be discussing them now.}
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=4in]{roulette.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+\easysubproblem{What is the probability of the ball landing in a black pocket? Calculate for both European and American roulette.}\spc{2}
+
+\easysubproblem{What is the probability of the ball landing in a green pocket? Calculate for both European and American roulette.}\spc{2}
+
+\easysubproblem{What is the probability you see RRBBBRGRBB in 10 spins in Las Vegas?}\spc{2}
+
+\easysubproblem{In the 18 red pockets there are 9 even numbered pockets and 9 odd numbered pockets. What is the probability of getting a pocket wihich is both Red and Odd in Las Vegas?}\spc{1}
+
+\easysubproblem{What is the probability you see a spin that is both Red and Green in Las Vegas?}\spc{0.5}
+
+\easysubproblem{What is the probability you see a spin that is Red or Green in Amsterdam?}\spc{0.5}
+
+
+\easysubproblem{In Las Vegas, you play the game 10 times and always bet on black. What is the probability you win all 10 times?}\spc{2}
+
+
+\intermediatesubproblem{In Las Vegas, you see BBBBBBBBBB. Conditional on seeing this event, what is the probability the next spin is R?}\spc{2}
+
+\intermediatesubproblem{In Las Vegas, what is the probability of BBBBBBBBBBR? This is the same situation as in the previous question, but framed differently (in order to confuse you).}\spc{2}
+
+\hardsubproblem{In Las Vegas, you play the game 10 times and always bet on black. What is the probability you win \textit{at least} once?}\spc{2}
+
+\end{enumerate}
+
+\end{document}
