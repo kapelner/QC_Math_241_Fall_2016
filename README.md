@@ -36,15 +36,15 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 ## Homeworks
 
 <!--
-* [Homework 11](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw11/hw11.pdf?raw=true) (due 12/14/15)
-* [Homework 10](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw10/hw10.pdf?raw=true) (due 12/4/15)
-* [Homework 9](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw09/hw09.pdf?raw=true) (due 11/23/15)
-* [Homework 8](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw08/hw08.pdf?raw=true) (due 11/6/15)
-* [Homework 7](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw07/hw07.pdf?raw=true) (due 10/30/15)
-* [Homework 6](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw06/hw06.pdf?raw=true) (due 10/23/15)
-* [Homework 5](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf?raw=true) (due 10/15/15) -->
+* [Homework 11](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw11/hw11.pdf?raw=true) (due 12/14/16)
+* [Homework 10](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw10/hw10.pdf?raw=true) (due 12/4/16)
+* [Homework 9](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw09/hw09.pdf?raw=true) (due 11/23/16)
+* [Homework 8](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw08/hw08.pdf?raw=true) (due 11/6/16)
+* [Homework 7](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw07/hw07.pdf?raw=true) (due 10/30/16)
+* [Homework 6](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw06/hw06.pdf?raw=true) (due 10/23/16)
+* [Homework 5](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf?raw=true) (due 10/15/16) -->
 * Homework 5 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf) (due 10/27/16)
-* Homework 4 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw04/hw04.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw04/hw04.pdf) (due 10/6/15)
+* Homework 4 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw04/hw04.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw04/hw04.pdf) (due 10/6/16)
 * Homework 3 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw03/hw03.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw03/hw03.pdf) (due 9/20/16)
 * Homework 2 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw02/hw02.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw02/hw02.pdf) (due 9/13/16)
 * Homework 1 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw01/hw01.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw01/hw01.pdf) (due 9/6/16)
