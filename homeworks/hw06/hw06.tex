@@ -45,243 +45,246 @@ NAME: \line(1,0){240} ~~SECTION (A or B): \line(1,0){35}
 
 }
 
-\end{document}
-
 \iftoggle{professormode}{
-\paragraph{More Random Variables} We will look at the binomial, geometric and its generalization, the negative binomial \\ \\
+\paragraph{More Random Variables} We will continue to look at the binomial, geometric and its generalization, the negative binomial. And we will cover expectation and variance as well. \\ \\
 }
 
-\problem{We will continue to look at the binomial.}
-
-\begin{enumerate}
-
-\easysubproblem{Let $\Xoneton \iid \bernoulli{p}$. Give a real-life example of this situation}\spc{4}
-
-\easysubproblem{Let $T_n = X_1 + \ldots + X_n$ where $\Xoneton \iid \bernoulli{p}$. How is $T_n$ distributed? }\spc{1}
-
-\hardsubproblem{Let $X_1, \ldots, X_n \iid \bernoulli{p}$ and $T_n = \sum_{i=1}^n X_i$. Derive the distribution of $T_n$ from first principles just like we did in the notes.}\spc{11}
-
-\hardsubproblem{Let $X_1, \ldots, X_n \iid \bernoulli{p}$ and $T_n = \sum_{i=1}^n X_i$. Derive the distribution of $T_n$ from first principles just like we did in the notes.}\spc{11}
-
-\end{enumerate}
-
-
-\problem{Imagine two Bernoulli r.v.'s $X_1$ and $X_2$ which model two fair coin flips where Heads is mapped to 1 and tails is mapped to 0. The probability of heads is 1/2.}
-
-\begin{enumerate}
-
-\easysubproblem{Given no other information, explain using the definition of r.v. independence why these two r.v.'s are independent. }\spc{2}
-
-\easysubproblem{Given no other information, explain using the definition of equality in distribution why $X_1 \equalsindist X_2$. }\spc{2}
-
-\easysubproblem{Are $X_1, X_2 \iid \bernoulli{p}$? }\spc{1}
-
-\intermediatesubproblem{ Now imagine these two coins were linked using some sort of sorcery. They are flipped at the same time but are guaranteed to flip the same way. That is, if the first coin goes heads, the second coin must go heads (and if the first coin goes tails, the second coin must go tails).
+\problem{This is the fun part of the homework. You're going to repeat the experiments we did in class. Let's make some data!
 
 \iftoggle{professormode}{
 \begin{figure}[htp]
 \centering
-\includegraphics[width=2.8in]{magiccoins.png}
-\end{figure}
-\FloatBarrier
-}
-
-Draw a probability tree of this scenario.}\spc{6}
-
-
-\intermediatesubproblem{Explain using the definition of r.v. independence why these two r.v.'s are \textit{dependent}. }\spc{5}
-
-\hardsubproblem{ Using the same two sorcery-controlled coins, explain using the definition of equality in distribution why or why not $X_1 \equalsindist X_2$. }\spc{3}
-
-
-\easysubproblem{Are $X_1, X_2 \iid \bernoulli{p}$ if they are modeled by these two sorcery-controlled coins? Yes / no. }\spc{0.3}
-
-
-\easysubproblem{Let $T_2 = X_1 + X_2$. Is $T_2 \sim \binomial{2}{\half}$? Why or why not?  }\spc{4}
-
-\end{enumerate}
-
-
-\problem{Imagine you are flipping the same bundle of coins from the practice midterm. The probability of the coin bundle landing on its side is $\prob{S} = 1/11$. Heads and tail probability are 5/11. Let's call landing on its side a \qu{success.}}
-
-\iftoggle{professormode}{
-\begin{figure}[htp]
-\centering
-\includegraphics[width=1.5in]{coins.png}
-\end{figure}
-\FloatBarrier
-}
-
-\begin{enumerate}
-
-\easysubproblem{I flip the coin bundle once. Model a success as a \qu{1.} Show that the r.v. modeling this event outcome is Bernoulli and define its parameter.  Write \qu{$X \sim$} something below. }\spc{2}
-
-\easysubproblem{Let's say we flip 10 times. What is the probability that we get one (and only one) success? I want to see a probability model.  Write \qu{$X \sim$} something below. Then I want to see a probability statement. Then I want to see a computation. Answer then in decimal rounded to two digits.  }\spc{3}
-
-\easysubproblem{Let's say we flip 10 times. What is the probability that we get 5 (and only 5) successes? }\spc{3}
-
-\easysubproblem{Let's say we flip 10 times. What is the probability that we get 8 (and only 8) successes? }\spc{3}
-
-\intermediatesubproblem{ Let's say we flip 10 times. What is the probability we get one or two successes? }\spc{3}
-
-\hardsubproblem{ Let's say we flip 10 times. What is the probability we get 3 or less successes?}\spc{3}
-
-\end{enumerate}
-
-
-\problem{Imagine you are playing roulette again this time in America. The probability of winning a bet on black is 18/38. Call this a \qu{success.}}
-
-\iftoggle{professormode}{
-\begin{figure}[htp]
-\centering
-\includegraphics[width=3in]{roulette.png}
-\end{figure}
-\FloatBarrier
-}
-
-\begin{enumerate}
-
-\easysubproblem{Let's say we spin 15 times. What is the probability that we get 10 successes? }\spc{3}
-
-\intermediatesubproblem{ Let's say we spin 30 times. Write a summation expression for getting 15 or more successes. Do not compute the answer explicitly. }\spc{3}
-
-\hardsubproblem{ Preview of statistics. You are now the casino floor manager for roulette. You witness 40 spins and it comes out black 18 times. Is this a \qu{weird} or \qu{unexpected} outcome? Explain using a calculation and a few sentences \textit{in English}.  }\spc{5}
-
-\hardsubproblem{ You witness 40 spins and it comes out black 38 times. Is this a \qu{weird} or \qu{unexpected} outcome? Explain using a calculation and a few sentences \textit{in English}.  }\spc{5}
-
-\extracreditsubproblem{ You witness 40 spins. How many times should black occur \qu{normally?} At which large values of number of blacks do get concerned by? At which small values of number of blacks do you get concerned by?  }\spc{7}
-
-\end{enumerate}
-
-
-\problem{Now that we understand both the binomial and the concept of $\iid$, we will ask some conceptual questions.}
-
-\begin{enumerate}
-
-
-\intermediatesubproblem{ The human mouth has 32 teeth. If the probability of a cavity at some point in a lifetime is 5\%, is it possible to calculate the probability of 7 cavities during a lifetime using a binomial r.v. model $X \sim \binomial{32}{5\%}$ and computing $\prob{X=7}$? Why or why not?  }\spc{4}
-
-\intermediatesubproblem{Bob drives his car twice a day during the workweek, 50 weeks per year for a total of 200 work days and thus, 400 commuting rides. If the probability of getting into an accident is about 1/1000, could we say the number of accidents per year can be modeled as a r.v. $X \sim \binomial{400}{1/1000}$? Why or why not?}\spc{6}
-
-\end{enumerate}
-
-\problem{We will be investigating r.v.'s by imagining a trip the grocery store to buy ingredients for guacamole.
-
-\iftoggle{professormode}{
-\begin{figure}[htp]
-\centering
-\includegraphics[width=2.5in]{avocados.png}
+\includegraphics[width=3in]{magic.jpg}
 \end{figure}
 \FloatBarrier
 }}
 
 \begin{enumerate}
 
-\easysubproblem{You buy \textit{one} avocado at the grocery store which is good (c.f. a bad avocado which may have brown inside because it's partially rotten). Call this probability of good $p$. Model the number of \textit{good} avocados you have using a random variable. All you need to write is $X \sim$ something. You do not need to write the PMF, draw the PMF, draw the CDF, etc. }\spc{0.5}
+\easysubproblem{Grab a cup and 8 pennies (or nickels, or dimes, etc). Use a magic marker to mark four of them (front and back). If you shake the cup and pull out three coins, let $X$ be the r.v. for how many marked coins you pull out? How is $X$ distributed? Write \qu{$X \sim$ something} below.}\spc{1}
+
+\easysubproblem{Using as fact that $\expe{X} = n\frac{K}{N}$ when  $X \sim \hypergeometric{n}{K}{N}$ (see Problem 6), calculate $\expe{X}$ for the r.v. you constructed in part (a). }\spc{3}
+
+\easysubproblem{Shake the cup and take out 3 coins. How many were marked? Repeat this five times. 
+Record your data below. That is, just write down the five numbers separated by commas.}\spc{1}
+
+\easysubproblem{Find $\xbar$ from the data you recorded in part (c). }\spc{0.5}
+
+\easysubproblem{Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? }\spc{1}
+
+\easysubproblem{Now forget that the coins are marked. If you shake the cup and flip all 8 coins, let $X$ be the r.v. for how many heads are flipped. How is $X$ distributed? Write \qu{$X \sim$ something} below.}\spc{1}
+
+\easysubproblem{Using the fact we proved in class that $\expe{X} = np$ when $X \sim \binomial{n}{p}$, calculate $\expe{X}$ for the r.v. you constructed in part (f). }\spc{1}
+
+\easysubproblem{Shake the cup and count the number of heads. Repeat this five times. 
+Record your data below. }\spc{1}
+
+\easysubproblem{Find $\xbar$ from the data you recorded in part (h).  }\spc{0.5}
+
+\easysubproblem{Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? }\spc{1}
 
 
+\easysubproblem{Now imagine one coin in the cup and success is defined as getting a head. Further imagine that you don't stop flipping this coin until you get a head. Let $X$ be the r.v. for how many flips you make. How is $X$ distributed? Write \qu{$X \sim$ something} below. }\spc{1}
 
-\easysubproblem{You buy 10 avocadoes. Assume the draws of avocadoes are independent. Model the number of \textit{good} avocados you have using a random variable. Call this r.v. $X$ and write $X \sim$ something below. }\spc{1}
+\easysubproblem{Using the fact we proved in class that $\expe{X} = 1/p$ when  $X \sim \geometric{p}$, calculate $\expe{X}$ for the r.v. you constructed in part (k). }\spc{1}
 
+\easysubproblem{Flip until you get a head. Repeat this five times. Record your data below. }\spc{1}
 
-\easysubproblem{Comment on why the r.v. you created in (b) is the sum of many $\iid$ r.v.'s you modeled in (a).  }\spc{3}
+\easysubproblem{Find $\xbar$ from the data you recorded in part (m).  }\spc{0.5}
 
-\easysubproblem{Write the PMF for the r.v. you created in (b). }\spc{1}
+\easysubproblem{Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? }\spc{1}
 
-\easysubproblem{Write the support for the r.v. you created in (b).  }\spc{1}
-
-\easysubproblem{Use the sigma notation for summing (e.g. $\sum$) to calculate the probability that you get 3, 4, 5 or 6 good avocados. Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  }\spc{2}
-
-\hardsubproblem{Now you do another activity. You take one avocado, cut it open and see if it's rotten. You keep doing this until you see a rotten avocado. Model the number of avocados you cut open using a r.v. Call this r.v. $X$. Be careful between \qu{rotten} and \qu{good}.}\spc{1}
-
-\easysubproblem{Write the PMF for the r.v. you created in (i).  }\spc{1}
-
-\easysubproblem{Write the support for the r.v. you created in (i).  }\spc{1}
-
-\easysubproblem{What is the probability you stop when looking at the third avocado?  }\spc{1}
-
-\easysubproblem{Use the sigma notation for summing (e.g. $\sum_{i=1}^5$) to calculate the probability that you stop between 4 and 37 avocados (including 4 and including 37). Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  }\spc{1}
+\easysubproblem{Now imagine one coin in the cup and success is defined as getting a head. Further imagine that you don't stop flipping this coin until you get two heads on at least two independent tosses. We did not have time to do this one in class. Make sure you actually do it! Let $X$ be the r.v. for how many flips you make. How is $X$ distributed? Write \qu{$X \sim$ something} below. }\spc{1}
 
 
-\intermediatesubproblem{Let's say at some point in your avocado shopping that you learned how to detect rotten avocadoes by using the \qu{squeeze test} and you used this learning to select new avocados. What assumption(s) would be violated?  }\spc{2}
+\extracreditsubproblem{$X \sim \negbin{r}{p}$. Verify $\expe{X} = \frac{r}{p}$. It is similar to the expectation proof for the Geometric.} \spc{0}
 
-\intermediatesubproblem{Let's say there were two baskets of avocados at the grocery store. The first basket comes from California-grown avocados and the second basket comes from Mexican-grown avocados. At some point in your picking of avocados you move from one basket to the other. What assumption(s) would be violated?  }\spc{2}
+\easysubproblem{Using as fact that $\expe{X} = r/p$ when $X \sim \negbin{r}{p}$, calculate $\expe{X}$ for the r.v. you constructed in part (p). }\spc{1}
 
-\intermediatesubproblem{Grocery stores usually put the old avocados on the top of the avocado basked and thus the new avocados on the bottom. If your strategy was just to pick the \qu{top} avocado each time, what assumption(s) would be violated?}\spc{2}
+\easysubproblem{Flip until you get two heads. Repeat this five times. Record your data below. }\spc{1}
 
-\intermediatesubproblem{Sometimes avocados are sold in mesh bags together in a 6-pack which are taken from the same farm even the same tree. If your strategy for picking is picking a basket all at once, examining each of the 6 avocados and then moving on to a new bunch, what assumption(s) would be violated?}\spc{2}
+\easysubproblem{Find $\xbar$ from the data you recorded in part (s).  }\spc{1}
 
-\end{enumerate}
+\easysubproblem{Is $\xbar \approx \expe{X}$? If not, what could you change in the experiment to make $\xbar$ closer to $\expe{X}$? }\spc{1}
 
-\problem{We will rederive the negative binomial PMF as we did in class. The probability of success if $p$ and the number of successes we wish to find is $r$.}
 
-\begin{enumerate}
+\extracreditsubproblem{$X \sim \hypergeometric{n}{K}{N}$. Verify $\sum_{x \in \support{X}} p(x) = 1$.}
 
-\easysubproblem{If we are waiting $x$ trials to finally see exactly $r$ successes, what does the outcome result of the last trial \textit{need} to be?  }\spc{2}
-
-\easysubproblem{How many trials do we witness in order to witness $r-1$ successes not counting the last trial?  }\spc{2}
-
-\easysubproblem{Can these $r-1$ successes happen anywhere within these $x-1$ trials?  }\spc{1}
-
-\easysubproblem{If you get $r-1$ successes in $x-1$ trials, how many failures do you get?  }\spc{2}
-
-\easysubproblem{How many ways is there to get $r-1$ successes among $x-1$ trials?  }\spc{2}
-
-\easysubproblem{What is the probability of getting $r-1$ successes and $x-r$ failures \textit{in that order} if successes and failures are independent?  }\spc{3}
-
-\easysubproblem{Use the answers in (e) and (f) to find the probability of getting $r-1$ successes in $x-1$ trials.  }\spc{2}
-
-\easysubproblem{Use the answers in (g) and the probability of a final success to finally derive the full PMF of the Negative Binomial distribution.  }\spc{2}
-
-\easysubproblem{Let $X \sim \negbin{r}{p}$. What is the support of $X$? }\spc{2}
-
-\intermediatesubproblem{What is the parameter space of $r$ and $p$? Be careful not to allow degenerate cases.  }\spc{3}
-
-\intermediatesubproblem{How did the negative binomial r.v. get its name?}\spc{6}
-
+\extracreditsubproblem{$X \sim \hypergeometric{n}{K}{N}$. Verify $\expe{X} = n\frac{K}{N}$ from the definition of $\expe{X}$.}
+ 
 \end{enumerate}
 
 
-\problem{You are testing RAM. The manufacturing process is near perfect. The probability of finding faulty RAM is about 1 in 300. We assume all RAM chips are independent with respect to whether they are faulty.
+\problem{We are going to return to our in-class discussion of the my ride from QC to Forest Hills using the Uber Taxi service. Since Queens is in New York City, I will be modeling based on Uber NYC rates. The current rates are posted \href{https://www.uber.com/en-US/cities/new-york}{here}. Thus, some numbers have changed from our in-class discussion.
 
 \iftoggle{professormode}{
 \begin{figure}[htp]
 \centering
-\includegraphics[width=3in]{ram.png}
+\includegraphics[width=2.5in]{uber.png}
+\end{figure}
+\FloatBarrier
+}
+
+For the purposes of this exercise, assume there are only two routes in which to drive back. This is close to realistic. There is the \qu{Van Wyck} (outlined in black on the right below) and \qu{Jewel Ave} which is the Q64 bus route (outlined in black on the left below).
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{route1.png}~~\includegraphics[width=3in]{route2.png}
+\end{figure}
+\FloatBarrier
+}
+
+The only determinant of route selection is whether or not there is traffic on the Van Wyck. If there is traffic, I take Jewel Ave route; if not, I take the Van Wyck route. The probability of traffic on the Van Wyck is 30\%. The Jewel Ave route is 2.3 miles and takes 13 min and the Van Wyck route is 8 min and is 3.6 miles.}
+
+\begin{enumerate}
+\easysubproblem{Let $W$ be the r.v. which models the time I travel in the Uber Taxi. What is its distribution? Use the notation we used in class.}\spc{2}
+
+\easysubproblem{What is $\support{W}$?}\spc{1}
+
+\easysubproblem{Compute $\expe{W}$ from the definition of expectation.}\spc{2}
+
+\easysubproblem{Write a sentence that synthesizes what part (c) means.}\spc{1}
+
+\easysubproblem{Let $D$ be the r.v. which models the distance I travel in the Uber Taxi. What is its distribution? Use the notation we used in class.}\spc{2}
+
+\easysubproblem{Compute $\expe{D}$.}\spc{2}
+
+\hardsubproblem{Are the r.v.'s $W$ and $D$ dependent? Justify your answer \textit{in English}.}\spc{3}
+
+\easysubproblem{Write a sentence that synthesizes what part (f) means.}\spc{1}
+
+\easysubproblem{UberX charges \$0.35\textbackslash min. Let $M$ be the r.v. which is what I pay for time on my trip home. Find the distribution of $M$.}\spc{2}
+
+\easysubproblem{Write $M$ as a function of $W$.}\spc{1}
+
+\easysubproblem{Calculate $\expe{M}$ based on the formula we learned in class about expectations of r.v.'s scaled by a constant.}\spc{1}
+
+\easysubproblem{UberX charges \$1.75\textbackslash mi of distance covered. Let $L$ be the r.v. which is what I pay for mileage on my trip home. Find the distribution of $L$.}\spc{2}
+
+\easysubproblem{Write $L$ as a function of $D$.}\spc{1}
+
+\easysubproblem{Calculate $\expe{L}$ based on the formula we learned in class about expectations of r.v.'s scaled by a constant.}\spc{1}
+
+\easysubproblem{Uber also includes a base fare of \$2.55. Let $B$ be the r.v. which models the total bill for my uberX ride. Write $B$ as a function of $W$ and $D$.}\spc{3}
+
+\intermediatesubproblem{We didn't really cover this in class, but you should be able to do it. $W$ and $D$ are one-to-one so the scaled $W$ and scaled $D$ sum is really one r.v. Find $\expe{B}$ based also on the formula we learned in class about the expectation of a r.v. with a constant added. }\spc{3}
+
+\easysubproblem{Write a sentence that synthesizes what part (p) means.}\spc{1}
+
+\hardsubproblem{UberBLACK is the original Uber taxi service. They dispatch a luxury black sedan to pick me up. The base fare is \$7 and they charge \$0.65\textbackslash min and \$3.75\textbackslash mi. Calculate $\expe{B}$ where $B$ is now the total bill for UberBLACK.}\spc{3}
+
+\end{enumerate}
+
+
+\problem{Imagine rolling two fair dice (no sorcery). Let $X_1$ be the r.v. corresponding to the first die and let $X_2$ be the r.v. corresponding to the second die. Let the outcome results be \$1 if you roll a 1, \$2 if you roll a 2, \ldots, and \$6 if you roll a six.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{dice.jpg}
 \end{figure}
 \FloatBarrier
 }}
 
 \begin{enumerate}
 
-\easysubproblem{What is the probability you get three faulty RAM chips in a row?  }\spc{1}
+\easysubproblem{What brand name r.v. is $X_1$ distributed as? Write $X \sim$ something and make sure the parameters are correct. }\spc{1}
 
-\intermediatesubproblem{What is the probability you have to investigate 100 RAM chips in order to find exactly 3 faulty chips? Compute explicitly.  }\spc{3}
+\easysubproblem{Does $X_1 \equalsindist X_2$? Yes or no is fine.}\spc{1}
 
-\intermediatesubproblem{What is the probability you have to investigate 500 RAM chips in order to find exactly 3 faulty chips? You can leave in choose notation and use exponents as well.  }\spc{3}
+\easysubproblem{Are $X_1$ and $X_2$ independent? Yes or no is fine.}\spc{1}
 
-\intermediatesubproblem{What is the probability you have to investigate 6 faulty RAM chips in order to find exactly 500 working chips? Compute explicitly. You may want to use the other parameterization from class.  }\spc{3}
+\easysubproblem{Compute $\expe{X_1}$ from first principles.}\spc{2}
 
-\hardsubproblem{What is the probability you have to investigate more than 500 RAM chips to see exactly 3 faulty chips? You can leave in choose notation and use exponents as well. Leave in terms of the binomial CDF.}\spc{5}
+\easysubproblem{Compute $\var{X_2}$ from first principles.}\spc{3}
+
+\easysubproblem{The standard deviation is also called \qu{standard error} and it sometimes denoted \qu{SE.} Use your answer in (e) to find $\se{X_i}$  for $i \in \braces{1,2}$. Please just use the square root and do not rederive the variance again from scratch. }\spc{1}
+
+\easysubproblem{Draw the PMF for $X_i$  for $i \in \braces{1,2}$ and mark $\expe{X_i}$ and $\se{X_i}$ on the graph similar to how we did in class.}\spc{6}
+
+\easysubproblem{Imagine the game where you just double the winnings of a single roll. This would be equivalent to just multiplying the r.v. by a scale factor of 2. Calculate $\expe{2X_i}$, $\var{2X_i}$ and $\se{2X_i}$ from the formulas we learned in class. }\spc{3}
+
+\easysubproblem{Draw the PMF for $2X_i$ for $i \in \braces{1,2}$ and mark $\expe{2X_i}$ and $\se{2X_i}$ that you calculated in (h) on the graph. }\spc{6}
+
+\hardsubproblem{Draw the PMF for $X_1 + X_2$. This involves taking a convolution. Since convolution won't be on the midterm or final, I'm going to give a hint. There is 1 way to get 2 or 12, 2 ways to get 3 or 11, 3 ways to get 4 or 10, 4 ways to get 5 or 9, 5 ways to get 6 or 8 and 6 ways to get 7. }\spc{7}
+
+\easysubproblem{Calculate $\expe{X_1 + X_2}$, $\var{X_1 + X_2}$ and $\se{X_1 + X_2}$ from the formulas we learned in class. Do not use the PMF from the last question; use the formulas from class.}\spc{2}
+
+\hardsubproblem{Why are the standard errors in (h) and (k) different and why is (h) larger? This involves a lot of thinking and I want a few sentences \textit{in English}. }\spc{8}
+
+\easysubproblem{Imagine the general case of $X_1, \ldots, X_n \iid$ with mean $\mu$ and variance $\sigsq$. Define $\Xbar$ as we did in class. Redo the derivation of $\expe{\Xbar} = \mu$.  }\spc{3}
+
+\easysubproblem{Imagine the general case of $X_1, \ldots, X_n \iid$ with mean $\mu$ and variance $\sigsq$. Define $\Xbar$ as we did in class. Redo the derivation of $\se{\Xbar} = \sigma / \sqrt{n}$.  }\spc{3}
+
+\easysubproblem{Calculate $\expe{\Xbar_n}$, $\var{\Xbar_n}$ and $\se{\Xbar_n}$ using the definition of $\Xbar_n$ we learned in class only as a function of $n$. Hint: use the formula you just derived. }\spc{3}
+
+\hardsubproblem{Imagine $n$ rolls of the dice to produce $n$  r.v.'s denoted $X_1, \ldots, X_n$ which of course are still $\iid$. Calculate $\expe{X_1 + \ldots + X_n}$, $\var{X_1 + \ldots + X_n}$ and $\se{X_1 + \ldots + X_n}$ only as a function of $n$.}\spc{2}
+
+\hardsubproblem{What does it mean that $\expe{\Xbar_n}$ is an unbiased estimator for $\mu$? Explain in a few sentences \textit{in English} why this is a good thing}\spc{3}
+
+\easysubproblem{If $n=1000$, what is $\se{\Xbar_n}$? Does that mean it's getting really close to $\expe{\Xbar_n}$? Why or why not.}\spc{2}
+
+\hardsubproblem{Now you have the choice between game A --- where you roll $n$ times and average the winnings (\ie you collect $\Xbar_n$ dollars at the end) or game B --- where you roll one die and collect the amount you make on just one roll. Use your answers to the relevant previous questions (I won't tell you which ones explicitly) to explain why you would choose game A over B or vice versa. I want multiple sentences \textit{in English}. You must convince me you understand the tradeoff that game A and B are making.}\spc{3}
+
+\easysubproblem{Redo the derivation of the rule $\var{aX} = a^2 \var{X}$ for any discrete r.v. $X$ and any constant $a \in \reals$.}\spc{3}
+
+\intermediatesubproblem{Let $Z$ be the standardized r.v. for $\Xbar_n$. Standardization of a r.v. X is defined as subtracting its mean and dividing by its standard error. For $\Xbar$ this would be:
+
+\beqn
+Z := \frac{\Xbar - \expe{\Xbar}}{\se{\Xbar}} =\frac{\Xbar - \mu}{\frac{\sigma}{\sqrt{n}}}  
+\eeqn
+
+Prove from the formulas in class that $\expe{Z} = 0$ and $\var{Z} = \se{Z} = 1$. Hint: use those two rules about $\var{aX}$ and $\var{X + c}$ you just rederived}\spc{3}
+
+\easysubproblem{Why is \qu{standardization} called \qu{standardization}?}\spc{2}
+
+\intermediatesubproblem{If $n=1000$ and you made $\xbar = \$4.00$, what is the $z$-score of this $\xbar$? That is if $\Xbar_n$ was standardized into the r.v. $Z$ (as in the previous question), what would be the corresponding realization of $z$ that corresponds to this $\xbar$?}\spc{5}
+
+\easysubproblem{We will learn later in Math 241 that $z \notin \bracks{-3,3}$ are very strange and smack of something being awry. Is something awry with making \$4.00 on average? Explain using a sentence \textit{in English}.}\spc{3}
+
+\intermediatesubproblem{Returning to $X$, the dice game in the beginning of the problem (the outcome results being \$1 if you roll a 1, \$2 if you roll a 2, \ldots, and \$6 if you roll a six), you calculated variance using the definition $\var{X} := \expe{\squared{X-\mu}}$ assuming the classic squared error loss: $e(x,\mu) := \squared{x - \mu}$. Imagine we defined a new variance metric using absolute loss, $e(x,\mu) := \abss{x - \mu}$. We'll denote this \qu{new variance} with a big squiggly symbol, $\widetilde{\var{X}} := \expe{\abss{X - \mu}}$ just to make sure you don't confuse it with the standard definition of $\var{X}$. Calculate $\widetilde{\var{X}}$ and include units.}\spc{2.5}
 
 \end{enumerate}
 
-
-\problem{Some simple definitional questions.}
+\problem{More simple r.v. practice.}
 
 \begin{enumerate}
 
-\easysubproblem{What is a realization of a r.v.?}\spc{4}
+\intermediatesubproblem{Let $X_1 \sim \bernoulli{p}$. Derive an expression for $\var{X_1}$ as a function of the parameter as we did in class. }\spc{3}
 
-\easysubproblem{Define \qu{datum}.}\spc{1}
+\easysubproblem{You know that $T_n$ is the sum of $n$ $\iid$ bernoulli r.v.s with parameter $p$. Show that $\var{T_n}$ can be easily derived using the variance-sum formula we learned in class. }\spc{3}
 
-\easysubproblem{Define \qu{data}.}\spc{1}
+\intermediatesubproblem{If you had complete control of both parameters $n$ and $p$, what would be the easiest manipulation to make the variance of $T_n$ as small as possible? }\spc{1}
 
-\easysubproblem{In a given r.v. model $X$, what set do they data belong to?}\spc{1}
+\easysubproblem{Prove $\var{X} = \expe{X^2} - \musq$ for any r.v. $X$ (this is in your notes). }\spc{3}
 
-\easysubproblem{Define \qu{iid data}.}\spc{2}
+\easysubproblem{Show from the definition of variance that $\var{X} \geq 0$ for any r.v. $X$. }\spc{3}
+
+\easysubproblem{Show that if $\var{X} = 0$, then $X$ must be degenerate. }\spc{1}
+
+\extracreditsubproblem{Show that if expected error for any $e(x,\mu)$ is 0, then $X$ must be degenerate.}\spc{2}
+
+\hardsubproblem{Show for any two r.v.'s $X$ and $Y$ which are independent that $\var{X \times Y} = \musq_X \sigsq_Y + \musq_Y \sigsq_X + \sigsq_X \sigsq_Y$. Remember, two r.v.'s multiplied together is a new r.v., $g(X, Y)$. }\spc{7}
+
+\easysubproblem{Let $a_1, a_2, \ldots, a_n$ be a sequence of constants. Let $X_1, \ldots, X_n$ be a sequence of r.v.'s which thereby share the same mean $\mu$. Create a simplified expression for $\expe{a_1 X_1 + \ldots + a_n X_n}$. I want the simplest combination of symbols $a_1, a_2, \ldots, a_n$ and $\mu$. }\spc{2}
+
+\intermediatesubproblem{Let $a_1, a_2, \ldots, a_n$ be a sequence of constants.  Assume $X_1, \ldots, X_n$ are a sequence of $\iid$ r.v.'s which thereby share the same variance $\sigsq$. Create a simplified expression for $\se{a_1 X_1 + \ldots + a_n X_n}$. I want the simplest combination of symbols $a_1, a_2, \ldots, a_n$ and $\mu$. }\spc{2}
+
+\intermediatesubproblem{Imagine a r.v. $X$ with PMF $p(x) = c/x^2$ and $\support{X} = \naturals$. What is the exact value of $c$ which makes $p(x)$ a valid PMF? The answer can be found \href{http://en.wikipedia.org/wiki/Riemann_zeta_function}{here}. }\spc{3}
+
+\extracreditsubproblem{$X$ is the same as in the previous problem. Show that $\var{X}$ does not exist (which means it's not a real number). You will need a fact from that same wikipedia page that you visited in the last problem. And now you've learned what the harmonic series is too. }\spc{10}
+
+\hardsubproblem{Let $Y := X^2$ where $X$ is a r.v. with PMF unknown. Use the notation $\mu$ for $\expe{X}$, $\sigsq$ for $\var{X}$, $\mu_3$ for $\expe{X^3}$ and $\mu_4$ for $\expe{X^4}$. Assume $\mu,~\sigsq,~\mu_3,~\mu_4$ all exist in $\reals$. Find $\var{Y}$ as a function of $\mu,~\sigsq,~\mu_3$ and $\mu_4$. This was the extra credit on last semester's midterm, thus the solution is online. Try to do it yourself first.}\spc{6}
+
+
+\hardsubproblem{Consider $X \sim \negbin{r}{p}$. Prove that $\var{X} = r(1-p)/p^2$ assuming that the variance of a geometric r.v. with parameter $p$ is $(1-p)/p^2$. }\spc{2}
+
+\hardsubproblem{Consider $X \sim \hypergeometric{n}{K}{N}$. Prove that $\expe{X} =n\frac{K}{N}$ using the rules of expectation. }\spc{2}
+
+\intermediatesubproblem{Prove the memorylessness property of $X \sim \geometric{p}$ by proving it holds for the definition of memorylessness i.e. $\prob{X > x} = \cprob{X > x_0 + x}{X > x_0}$.}\spc{3}
+
 
 \end{enumerate}
-
 
 \end{document}

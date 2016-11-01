@@ -35,14 +35,7 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 
 ## Homeworks
 
-<!--
-* [Homework 11](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw11/hw11.pdf?raw=true) (due 12/14/16)
-* [Homework 10](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw10/hw10.pdf?raw=true) (due 12/4/16)
-* [Homework 9](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw09/hw09.pdf?raw=true) (due 11/23/16)
-* [Homework 8](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw08/hw08.pdf?raw=true) (due 11/6/16)
-* [Homework 7](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw07/hw07.pdf?raw=true) (due 10/30/16)
-* [Homework 6](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw06/hw06.pdf?raw=true) (due 10/23/16)
-* [Homework 5](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf?raw=true) (due 10/15/16) -->
+* Homework 6 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw06/hw06.pdf) (due 11/11/16)
 * Homework 5 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf) (due 10/27/16)
 * Homework 4 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw04/hw04.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw04/hw04.pdf) (due 10/6/16)
 * Homework 3 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw03/hw03.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw03/hw03.pdf) (due 9/20/16)
@@ -57,13 +50,21 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 
 [(exam)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1.pdf) [(exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1_solutions.pdf)
 
+* Midterm II November 15 (in class). 
+
+* Final
+
+## Practice Exams
+
+* Midterm I
+
 [(practice exam 1)](https://github.com/kapelner/QC_Math_241_Fall_2015/blob/master/exams/midterm1/midterm1.pdf) [(practice exam 1 solutions)](https://github.com/kapelner/QC_Math_241_Fall_2015/blob/master/exams/midterm1/midterm1_solutions.pdf) 
 
 [(practice exam 2)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm1/midterm1.pdf?raw=true) [(practice exam 2 solutions)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true) 
 
 [(practice exam 3)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1.pdf?raw=true) [(practice exam 3 solutions)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm1/midterm1_solutions.pdf?raw=true)
 
-* Midterm II November 15 (in class). 
+* Midterm II
 
 [(practice exam 1)](https://github.com/kapelner/QC_Math_241_Fall_2015/blob/master/exams/midterm2/midterm2.pdf) [(practice exam 1 solutions)](https://github.com/kapelner/QC_Math_241_Fall_2015/blob/master/exams/midterm2/midterm2_solutions.pdf) 
 
@@ -71,15 +72,13 @@ My lectures can be listened to as clyp.it tracks and lecture notes are also scan
 
 [(practice exam 3)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm2/midterm2.pdf?raw=true) [(practice exam 3 solutions)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/midterm2/midterm2_solutions.pdf?raw=true)
 
-
-* Final December ?
+* Final
 
 [(practice exam 1)](https://github.com/kapelner/QC_Math_241_Fall_2015/blob/master/exams/final/final.pdf) [(practice exam 1 solutions)](https://github.com/kapelner/QC_Math_241_Fall_2015/blob/master/exams/final/final_solutions.pdf)  
 
 [(practice exam 2)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/final/final.pdf?raw=true) [(practice exam 2 solutions)](https://github.com/kapelner/QC_Math_241_Spring_2015/blob/master/exams/final/final_solutions.pdf?raw=true) 
 
 [(practice exam 3)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/final/final.pdf?raw=true) [(practice exam 3 solutions)](https://github.com/kapelner/QC_Math_241_Fall_2014_15/blob/master/exams/final/final_solutions.pdf?raw=true)
-
 
 ## Office Hours
 
