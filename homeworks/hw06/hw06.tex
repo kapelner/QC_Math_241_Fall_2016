@@ -1,0 +1,287 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 241 Fall 2016 Homework \#6}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due \textit{in class}, Friday, November 11, 2016 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, read the section about the Geometric and Negative Binomial r.v.'s, expectation and variance as well as expectation and variance of linear transformations and sums of r.v.'s in Ross.% Chapter references are from the 7th edition.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
+
+Up to 15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, upload \texttt{hwxx.tex} and \texttt{preamble.tex}, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. I do not accept homeworks not on this printout. Keep this first page printed for your records. Write your name and section below (A or B).
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){240} ~~SECTION (A or B): \line(1,0){35}
+
+}
+
+\end{document}
+
+\iftoggle{professormode}{
+\paragraph{More Random Variables} We will look at the binomial, geometric and its generalization, the negative binomial \\ \\
+}
+
+\problem{We will continue to look at the binomial.}
+
+\begin{enumerate}
+
+\easysubproblem{Let $\Xoneton \iid \bernoulli{p}$. Give a real-life example of this situation}\spc{4}
+
+\easysubproblem{Let $T_n = X_1 + \ldots + X_n$ where $\Xoneton \iid \bernoulli{p}$. How is $T_n$ distributed? }\spc{1}
+
+\hardsubproblem{Let $X_1, \ldots, X_n \iid \bernoulli{p}$ and $T_n = \sum_{i=1}^n X_i$. Derive the distribution of $T_n$ from first principles just like we did in the notes.}\spc{11}
+
+\hardsubproblem{Let $X_1, \ldots, X_n \iid \bernoulli{p}$ and $T_n = \sum_{i=1}^n X_i$. Derive the distribution of $T_n$ from first principles just like we did in the notes.}\spc{11}
+
+\end{enumerate}
+
+
+\problem{Imagine two Bernoulli r.v.'s $X_1$ and $X_2$ which model two fair coin flips where Heads is mapped to 1 and tails is mapped to 0. The probability of heads is 1/2.}
+
+\begin{enumerate}
+
+\easysubproblem{Given no other information, explain using the definition of r.v. independence why these two r.v.'s are independent. }\spc{2}
+
+\easysubproblem{Given no other information, explain using the definition of equality in distribution why $X_1 \equalsindist X_2$. }\spc{2}
+
+\easysubproblem{Are $X_1, X_2 \iid \bernoulli{p}$? }\spc{1}
+
+\intermediatesubproblem{ Now imagine these two coins were linked using some sort of sorcery. They are flipped at the same time but are guaranteed to flip the same way. That is, if the first coin goes heads, the second coin must go heads (and if the first coin goes tails, the second coin must go tails).
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.8in]{magiccoins.png}
+\end{figure}
+\FloatBarrier
+}
+
+Draw a probability tree of this scenario.}\spc{6}
+
+
+\intermediatesubproblem{Explain using the definition of r.v. independence why these two r.v.'s are \textit{dependent}. }\spc{5}
+
+\hardsubproblem{ Using the same two sorcery-controlled coins, explain using the definition of equality in distribution why or why not $X_1 \equalsindist X_2$. }\spc{3}
+
+
+\easysubproblem{Are $X_1, X_2 \iid \bernoulli{p}$ if they are modeled by these two sorcery-controlled coins? Yes / no. }\spc{0.3}
+
+
+\easysubproblem{Let $T_2 = X_1 + X_2$. Is $T_2 \sim \binomial{2}{\half}$? Why or why not?  }\spc{4}
+
+\end{enumerate}
+
+
+\problem{Imagine you are flipping the same bundle of coins from the practice midterm. The probability of the coin bundle landing on its side is $\prob{S} = 1/11$. Heads and tail probability are 5/11. Let's call landing on its side a \qu{success.}}
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.5in]{coins.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem{I flip the coin bundle once. Model a success as a \qu{1.} Show that the r.v. modeling this event outcome is Bernoulli and define its parameter.  Write \qu{$X \sim$} something below. }\spc{2}
+
+\easysubproblem{Let's say we flip 10 times. What is the probability that we get one (and only one) success? I want to see a probability model.  Write \qu{$X \sim$} something below. Then I want to see a probability statement. Then I want to see a computation. Answer then in decimal rounded to two digits.  }\spc{3}
+
+\easysubproblem{Let's say we flip 10 times. What is the probability that we get 5 (and only 5) successes? }\spc{3}
+
+\easysubproblem{Let's say we flip 10 times. What is the probability that we get 8 (and only 8) successes? }\spc{3}
+
+\intermediatesubproblem{ Let's say we flip 10 times. What is the probability we get one or two successes? }\spc{3}
+
+\hardsubproblem{ Let's say we flip 10 times. What is the probability we get 3 or less successes?}\spc{3}
+
+\end{enumerate}
+
+
+\problem{Imagine you are playing roulette again this time in America. The probability of winning a bet on black is 18/38. Call this a \qu{success.}}
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{roulette.png}
+\end{figure}
+\FloatBarrier
+}
+
+\begin{enumerate}
+
+\easysubproblem{Let's say we spin 15 times. What is the probability that we get 10 successes? }\spc{3}
+
+\intermediatesubproblem{ Let's say we spin 30 times. Write a summation expression for getting 15 or more successes. Do not compute the answer explicitly. }\spc{3}
+
+\hardsubproblem{ Preview of statistics. You are now the casino floor manager for roulette. You witness 40 spins and it comes out black 18 times. Is this a \qu{weird} or \qu{unexpected} outcome? Explain using a calculation and a few sentences \textit{in English}.  }\spc{5}
+
+\hardsubproblem{ You witness 40 spins and it comes out black 38 times. Is this a \qu{weird} or \qu{unexpected} outcome? Explain using a calculation and a few sentences \textit{in English}.  }\spc{5}
+
+\extracreditsubproblem{ You witness 40 spins. How many times should black occur \qu{normally?} At which large values of number of blacks do get concerned by? At which small values of number of blacks do you get concerned by?  }\spc{7}
+
+\end{enumerate}
+
+
+\problem{Now that we understand both the binomial and the concept of $\iid$, we will ask some conceptual questions.}
+
+\begin{enumerate}
+
+
+\intermediatesubproblem{ The human mouth has 32 teeth. If the probability of a cavity at some point in a lifetime is 5\%, is it possible to calculate the probability of 7 cavities during a lifetime using a binomial r.v. model $X \sim \binomial{32}{5\%}$ and computing $\prob{X=7}$? Why or why not?  }\spc{4}
+
+\intermediatesubproblem{Bob drives his car twice a day during the workweek, 50 weeks per year for a total of 200 work days and thus, 400 commuting rides. If the probability of getting into an accident is about 1/1000, could we say the number of accidents per year can be modeled as a r.v. $X \sim \binomial{400}{1/1000}$? Why or why not?}\spc{6}
+
+\end{enumerate}
+
+\problem{We will be investigating r.v.'s by imagining a trip the grocery store to buy ingredients for guacamole.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in]{avocados.png}
+\end{figure}
+\FloatBarrier
+}}
+
+\begin{enumerate}
+
+\easysubproblem{You buy \textit{one} avocado at the grocery store which is good (c.f. a bad avocado which may have brown inside because it's partially rotten). Call this probability of good $p$. Model the number of \textit{good} avocados you have using a random variable. All you need to write is $X \sim$ something. You do not need to write the PMF, draw the PMF, draw the CDF, etc. }\spc{0.5}
+
+
+
+\easysubproblem{You buy 10 avocadoes. Assume the draws of avocadoes are independent. Model the number of \textit{good} avocados you have using a random variable. Call this r.v. $X$ and write $X \sim$ something below. }\spc{1}
+
+
+\easysubproblem{Comment on why the r.v. you created in (b) is the sum of many $\iid$ r.v.'s you modeled in (a).  }\spc{3}
+
+\easysubproblem{Write the PMF for the r.v. you created in (b). }\spc{1}
+
+\easysubproblem{Write the support for the r.v. you created in (b).  }\spc{1}
+
+\easysubproblem{Use the sigma notation for summing (e.g. $\sum$) to calculate the probability that you get 3, 4, 5 or 6 good avocados. Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  }\spc{2}
+
+\hardsubproblem{Now you do another activity. You take one avocado, cut it open and see if it's rotten. You keep doing this until you see a rotten avocado. Model the number of avocados you cut open using a r.v. Call this r.v. $X$. Be careful between \qu{rotten} and \qu{good}.}\spc{1}
+
+\easysubproblem{Write the PMF for the r.v. you created in (i).  }\spc{1}
+
+\easysubproblem{Write the support for the r.v. you created in (i).  }\spc{1}
+
+\easysubproblem{What is the probability you stop when looking at the third avocado?  }\spc{1}
+
+\easysubproblem{Use the sigma notation for summing (e.g. $\sum_{i=1}^5$) to calculate the probability that you stop between 4 and 37 avocados (including 4 and including 37). Since you don't know $p$ you cannot actually compute a numerical value for this probability. Leave it in sigma notation.  }\spc{1}
+
+
+\intermediatesubproblem{Let's say at some point in your avocado shopping that you learned how to detect rotten avocadoes by using the \qu{squeeze test} and you used this learning to select new avocados. What assumption(s) would be violated?  }\spc{2}
+
+\intermediatesubproblem{Let's say there were two baskets of avocados at the grocery store. The first basket comes from California-grown avocados and the second basket comes from Mexican-grown avocados. At some point in your picking of avocados you move from one basket to the other. What assumption(s) would be violated?  }\spc{2}
+
+\intermediatesubproblem{Grocery stores usually put the old avocados on the top of the avocado basked and thus the new avocados on the bottom. If your strategy was just to pick the \qu{top} avocado each time, what assumption(s) would be violated?}\spc{2}
+
+\intermediatesubproblem{Sometimes avocados are sold in mesh bags together in a 6-pack which are taken from the same farm even the same tree. If your strategy for picking is picking a basket all at once, examining each of the 6 avocados and then moving on to a new bunch, what assumption(s) would be violated?}\spc{2}
+
+\end{enumerate}
+
+\problem{We will rederive the negative binomial PMF as we did in class. The probability of success if $p$ and the number of successes we wish to find is $r$.}
+
+\begin{enumerate}
+
+\easysubproblem{If we are waiting $x$ trials to finally see exactly $r$ successes, what does the outcome result of the last trial \textit{need} to be?  }\spc{2}
+
+\easysubproblem{How many trials do we witness in order to witness $r-1$ successes not counting the last trial?  }\spc{2}
+
+\easysubproblem{Can these $r-1$ successes happen anywhere within these $x-1$ trials?  }\spc{1}
+
+\easysubproblem{If you get $r-1$ successes in $x-1$ trials, how many failures do you get?  }\spc{2}
+
+\easysubproblem{How many ways is there to get $r-1$ successes among $x-1$ trials?  }\spc{2}
+
+\easysubproblem{What is the probability of getting $r-1$ successes and $x-r$ failures \textit{in that order} if successes and failures are independent?  }\spc{3}
+
+\easysubproblem{Use the answers in (e) and (f) to find the probability of getting $r-1$ successes in $x-1$ trials.  }\spc{2}
+
+\easysubproblem{Use the answers in (g) and the probability of a final success to finally derive the full PMF of the Negative Binomial distribution.  }\spc{2}
+
+\easysubproblem{Let $X \sim \negbin{r}{p}$. What is the support of $X$? }\spc{2}
+
+\intermediatesubproblem{What is the parameter space of $r$ and $p$? Be careful not to allow degenerate cases.  }\spc{3}
+
+\intermediatesubproblem{How did the negative binomial r.v. get its name?}\spc{6}
+
+\end{enumerate}
+
+
+\problem{You are testing RAM. The manufacturing process is near perfect. The probability of finding faulty RAM is about 1 in 300. We assume all RAM chips are independent with respect to whether they are faulty.
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{ram.png}
+\end{figure}
+\FloatBarrier
+}}
+
+\begin{enumerate}
+
+\easysubproblem{What is the probability you get three faulty RAM chips in a row?  }\spc{1}
+
+\intermediatesubproblem{What is the probability you have to investigate 100 RAM chips in order to find exactly 3 faulty chips? Compute explicitly.  }\spc{3}
+
+\intermediatesubproblem{What is the probability you have to investigate 500 RAM chips in order to find exactly 3 faulty chips? You can leave in choose notation and use exponents as well.  }\spc{3}
+
+\intermediatesubproblem{What is the probability you have to investigate 6 faulty RAM chips in order to find exactly 500 working chips? Compute explicitly. You may want to use the other parameterization from class.  }\spc{3}
+
+\hardsubproblem{What is the probability you have to investigate more than 500 RAM chips to see exactly 3 faulty chips? You can leave in choose notation and use exponents as well. Leave in terms of the binomial CDF.}\spc{5}
+
+\end{enumerate}
+
+
+\problem{Some simple definitional questions.}
+
+\begin{enumerate}
+
+\easysubproblem{What is a realization of a r.v.?}\spc{4}
+
+\easysubproblem{Define \qu{datum}.}\spc{1}
+
+\easysubproblem{Define \qu{data}.}\spc{1}
+
+\easysubproblem{In a given r.v. model $X$, what set do they data belong to?}\spc{1}
+
+\easysubproblem{Define \qu{iid data}.}\spc{2}
+
+\end{enumerate}
+
+
+\end{document}
