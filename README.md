@@ -4,7 +4,7 @@ This is the course homepage for Math 241 for the Fall semester 2016 at Queens Co
 
 ## Lectures
 
-My lectures can be listened to as clyp.it tracks [(all lectures)](https://clyp.it/user/dhq0ft55) and lecture notes are also scanned in as PDF files contributed by students and myself. Clyp has an iphone and android app as well.
+My lectures can be listened to as clyp.it tracks [(all lectures)](https://clyp.it/search?type=hashtag&query=kapelner) and lecture notes are also scanned in as PDF files contributed by students and myself. Clyp has an iphone and android app as well.
 
 
 <!--
