@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+\usepackage{textcomp}
+\usepackage{tfrupee} 
+\pdfmapfile{=tfrupee.map}
+
+\title{Math 241 Fall 2016 \\ Midterm Examination Two}
+\author{Professor Adam Kapelner}
+
+\date{November 15, 2016}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){270} ~~~ Section (A or B)~ \line(1,0){30}
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using a cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+
+This exam is seventy five minutes and closed-book. You are allowed one page (front and back) of a \qu{cheat sheet.} You may use a graphing calculator of your choice. Please read the questions carefully. If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in choose, permutation, exponent, factorial or any other notation which could be resolved to a number with a computer. I advise you to skip problems marked \qu{[Extra Credit]} until you have finished the other questions on the exam, then loop back and plug in all the holes. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+\problem Many students take probability and statistics to go on to a career as an actuary. In America, this requires passing many exams. The third exam is called the \qu{models for financial economics} or \qu{MFE} which consists of 30 multiple choice questions with 5 choices each. Each question is separate from other questions (i.e. self-contained).
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{scantron.png}
+\end{figure}
+
+In July 2016, the passing rate was $\approx$72\% of questions correct. For the purposes of this problem, assume this means 22 of the questions (or more) would have to be correct in order to pass. \\
+
+We first consider the situation where the test-taker guesses the answer to each question by choosing one of the five equally likely choices. 
+
+\benum
+\subquestionwithpoints{3} Model the result of \emph{one} question below as a r.v. $X$ which has the value 1 if the answer is correct and 0 if the answer is not correct.  \spc{1}
+
+\subquestionwithpoints{2} When guessing the answers to all 30 questions, are the r.v.'s that represent each question's correctness identically distributed? Yes / no. No explanation necessary.  \spc{0.2}
+
+\subquestionwithpoints{2} When guessing the answers to all 30 questions, are the r.v.'s that represent each question's correctness independent? Yes / no. No explanation necessary.  \spc{0.2}
+
+\subquestionwithpoints{3} Create a r.v. model that represents the total score for all 30 questions.  \spc{1}
+
+\subquestionwithpoints{6} Compute the probability that the guesser gets \textit{exactly} 22 questions correct. Round to three significant digits.  \spc{4}
+
+\subquestionwithpoints{3} If the guesser did the exam over and over again, what would his test average approximately be? \spc{1}
+
+\subquestionwithpoints{6} Write an computable expression for the probability that the guesser passes the exam. Do not compute it explicitly.  \spc{3}
+
+\subquestionwithpoints{5} Regardless of your answer in (g), do you think the guesser has a \textit{realistic} chance of passing? Yes / no and explain your answer. \spc{3}
+
+\subquestionwithpoints{4} In the situtation where the test-taker knows something about some of the topics tested and uses that knowledge to answer some questions but guess on others which he has no knowledge of the topics, would the model built in (d) still be a good model for the test-taker's score on the exam? Yes / no and explain your answer. \spc{5}
+
+\eenum
+
+
+\problem Powerball is an American lottery game offered by 44 states, the District of Columbia, Puerto Rico and the US Virgin Islands. Since October 7, 2015, the game has used 5 white balls picked from 69 possible balls with replacement and onw \qu{powerball} with 26 possible balls resulting in a matrix from which winning numbers are chosen, resulting in odds of 1 in 292,201,338 of winning a jackpot per play (i.e. about three in a billion). Calculated as a probability, we denote the chance of winning as $p := 3.42 \times 10^{-9}$. \\
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in]{powerball.png}
+\end{figure}
+
+Assume for simplicity that there is a powerball lottery every day, 365 days per year. Also assume when you buy a powerball lottery ticket, you pick a sequence of valid powerball numbers randomly (i.e. equally likely) for each ball.
+
+\benum
+\subquestionwithpoints{3} Create a r.v. $X$ for the outcome of one powerball lottery ticket which realizes 1 if you win and 0 if you lose. \spc{1}
+
+
+\subquestionwithpoints{3} Consider the following strategy: buy a powerball ticket every day until you win. Create a r.v. model $X$ that models the number of days it takes to win. \spc{1}
+
+\subquestionwithpoints{5} How many years would it take to win on average? Round to the nearest year. \spc{4}
+
+\subquestionwithpoints{5} Imagine starting to play when you're 20 years old and stopping when you're 90 years old for a total of 70 years of daily playing. What is the probability of winning (at least once)? Round to two significant digits. \spc{5}
+
+
+\subquestionwithpoints{5} Assuming you can play everyday \emph{forever}, what is the probability you eventually win? \spc{0.2}
+
+\subquestionwithpoints{3} If you've been playing for 30 years without winning, do you have a higher chance of winning compared to someone who has just started playing? Yes / no. No explanation needed. \spc{0.2}
+
+\subquestionwithpoints{5} Up until this point, we have just been discussing probabilities and modeling the event of winning or losing. Now we will put dollar amounts on these events. The powerball ticket costs \$2 and the average jackpot is \$140 million. Create a r.v. $X$ for the payout of \textit{one} powerball ticket. \spc{4}
+
+\subquestionwithpoints{5} Calculate the expected value of $X$, (the r.v. model for the payout of \emph{one} powerball ticket in dollars). Round to an appropriate number of digits. \spc{5}
+
+\subquestionwithpoints{5} Interpret the expected value you calculated in (i) in the scenario where you don't play for 70 years daily but you \textit{only play once}. \spc{4}
+
+\subquestionwithpoints{6} Calculate the standard error of \emph{one} powerball lottery ticket.  Include units and round to an appropriate number of digits. \spc{8}
+
+
+\subquestionwithpoints{4} Let's say you are buying the ticket in India where the currency is rupees (\rupee). The exchange rate is \$1 = \rupee66.80 and you have to pay a flat \rupee30 fee to purchase an American ticket from overseas. Create a r.v. $R$ for the lottery ticket bought in India with rupees as a function of the r.v. $X$ created in (h).\spc{2}
+
+\eenum
+
+\problem These are some theoretical questions below.
+
+\benum
+\subquestionwithpoints{3} If the r.v. $X \sim $ Deg($c$), prove $\expe{X} = c$ from the definition of expectation for discrete r.v.'s. \spc{5}
+
+%\subquestionwithpoints{3} If $\Xoneton \iid$ with finite $\mu$ and $\sigma$, derive an expression for $\se{\Xbar}$ step-by-step. \spc{3}
+
+
+
+\subquestionwithpoints{4} Compute the following expression for $w = 0.24586$:
+
+\beqn
+\sum_{\ell=y}^\infty \binom{\ell - 1}{y - 1} w^y (1-w)^{\ell - y}  = \quad\quad\quad\quad
+\eeqn\spc{1}
+
+\subquestionwithpoints{4} Assume $\expe{X_i} > 0$ and that $\Xoneton $ are \textit{identically distributed} but not necessarily independent. Resolve: \\
+
+$\displaystyle\limitn \expe{T_n}  = $\spc{0.3}
+
+
+\subquestionwithpoints{6} In your pocket you have 10 pennies, 2 nickels, 2 dimes and 3 quarters. You reach into your pocket and grab four coins in your hand. What's the probability you have 4\textcent~in your hand? \spc{15}
+
+
+\subquestionwithpoints{4} [Extra Credit] Resolve the follwing expression for arbitrary r.v. $X$:
+
+\beqn
+\bigcup_{x \in \supp{X}} \braces{\omega : X(\omega) = x}  = \quad\quad\quad\quad
+\eeqn
+
+\subquestionwithpoints{4} [Extra Credit] Create a r.v. $X$ that has $\abss{\supp{X}} = 2$ but whose $\abss{\Omega} =  \aleph_0$.
+
+\eenum
+
+
+\end{document}
