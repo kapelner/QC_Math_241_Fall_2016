@@ -1,0 +1,520 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 241 Fall 2016 Homework \#8}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due 2PM, Friday, December 2, 2016 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+
+
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''.  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, read moment generating functions and their properties and read about the central limit theorem.
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
+
+Up to 15 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, upload \texttt{hwxx.tex} and \texttt{preamble.tex}, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. I do not accept homeworks not on this printout. Keep this first page printed for your records. Write your name and section below (A or B).
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){240} ~~SECTION (A or B): \line(1,0){35}
+
+}
+
+\iftoggle{professormode}{
+\paragraph{Moment Generating Functions} There are a few facts to know for the exam. This is what you are responsible for.\\ \\
+} 
+
+\problem{In this problem you will be introduced to mgf's and learn the three facts about them that we will make use of (1) that mgf's can give you moments easily and (2) it is easy to obtain the mgf of convolutions of r.v.'s. (3) r.v.'s with equivalent mgf's have equivalent CDF's, making them identically distributed.}
+
+\begin{enumerate}
+
+\easysubproblem{What is a moment generating function (mgf)? Read about it in the book and answer a few sentences \textit{in English}. }\spc{2}
+
+\easysubproblem{Using the definition of expectation, write out what $\expe{g(X)}$ is for a discrete r.v. $X$. This can be found in the notes from previous lectures. }\spc{2}
+
+\easysubproblem{Using the definition of expectation, write out what $\expe{g(X)}$ is for a continuous r.v. $X$. This can be found in the notes from previous lectures. }\spc{2}
+
+\easysubproblem{For the mgf, what is the $g(X)$ transformation we are interested in finding the expectation of? Write $g(X) = $ something below. }\spc{2}
+
+\easysubproblem{If $X$ is a discrete r.v., write the definition of the mgf, $M_X(t)$. If you use the notation $f(x)$ make sure you indicate what you are referring to. If you use the notation $\expe{\cdot}$, make sure you indicate the mathematical definition of the expectation. }\spc{2}
+
+\easysubproblem{If $X$ is a continuous r.v., write the definition of the mgf, $M_X(t)$. If you use the notation $f(x)$ make sure you indicate what you are referring to. If you use the notation $\expe{\cdot}$, make sure you indicate the mathematical definition of the expectation.  }\spc{2}
+
+\easysubproblem{Using the Taylor series definition of the exponential function, write out the first five terms of what $e^{tX}$ is and then write $+~\ldots$ afterwards.  }\spc{2}
+
+\easysubproblem{Using your answer from part (g), write the first five terms of $\expe{ e^{tX} }$ using the property of expectation being a linear operator (\ie $\expe{X+Y} = \expe{X} + \expe{Y}$ which is valid always) and then write $+ ~\expe{\ldots}$ afterwards.  }\spc{1.5}
+
+\easysubproblem{You have written the first five terms of the infinite series representation of $M_X(t)$, the mgf for a r.v. $X$ in the previous problem. Now find $M'_X(t)$, the derivative of the mgf with respect to $t$, the dummy variable in the $t$ domain and then write $+~ \ldots$ afterwards. Remember, anything that's a function of the r.v. $X$ is a constant when differentiating with respect to $t$.  }\spc{1.5}
+
+\easysubproblem{Find $M'_X(0)$, \ie the derivative of the mgf evaluated at $t=0$. Ignore terms after the ...  }\spc{4}
+
+\easysubproblem{Find $M''_X(t)$, the second derivative of the mgf with respect to $t$ and then write $+ \ldots$ afterwards.  }\spc{2}
+
+\easysubproblem{Find $M''_X(0)$, \ie the second derivative of the mgf evaluated at $t=0$. Ignore terms after the ...  }\spc{2}
+
+\easysubproblem{Find $M'''_X(t)$, the third derivative of the mgf with respect to $t$ and then write $+ \ldots$ afterwards.  }\spc{2}
+
+\easysubproblem{Find $M'''_X(0)$, \ie the third derivative of the mgf evaluated at $t=0$. Ignore terms after the ...  }\spc{2}
+
+\easysubproblem{When evaluating parts (j), (l), (n) at $t=0$, why do you think you're entitled to ignore terms after the ...? Write a sentence \textit{in English}.  }\spc{2}
+
+\easysubproblem{Synthesize your answers to the last 7 parts and explain why the mgf is called the \qu{moment generating} function \textit{in English}.  }\spc{2}
+
+\easysubproblem{Let $X_1$ and $X_2$ be two independent r.v's (not necessarily identically distributed). Show that $M_{X_1+X_2}(t) = M_{X_1}(t)M_{X_2}(t)$.  }\spc{2}
+
+\intermediatesubproblem{Generalize this reasoning and show that for $X_1, X_2, \ldots, X_n$, a series of independent r.v.'s discrete or continuous and $T_n = \sum_{i=1}^n X_i$ that the following is true:
+
+\beqn
+M_{T_n}(t) = \prod_{i=1}^n M_{X_i}(t)
+\eeqn  }\spc{3}
+
+\hardsubproblem{In (q) and (r), why do we need independence to prove these facts? Write a couple sentences \textit{in English} referencing the lecture where we went over this.  }\spc{3}
+
+\intermediatesubproblem{Let $Y = X + c$ where $X$ is a r.v. either discrete or continuous and $c \in \reals$ is a constant. Let $M_X(t)$ denote the mgf for the r.v. $X$. Find $M_Y(t)$, the mgf for the shifted r.v. $Y$ as a function of $M_X(t)$.  }\spc{5}
+
+\hardsubproblem{Let $Y = aX$ where $X$ is a r.v. either discrete or continuous and $a \in \reals$ is a constant. Let $M_X(t)$ denote the mgf for the r.v. $X$. Find $M_Y(t)$, the mgf for the scaled r.v. $Y$ as a function of $M_X(t)$.  }\spc{2}
+
+\end{enumerate}
+
+\problem{Here, we will be deriving mgf's of some of our brand name r.v.'s and using them to prove cool things about distribution theory.}
+
+
+\begin{enumerate}
+\easysubproblem{Let $X \sim \bernoulli{p}$. Show that $\expe{X^{37}} = p$ using the definition of expectation. I will begin the problem below for you: 
+
+\beqn
+\expe{X^{37}} &=& \sum_{x \in \support{X}} x^{37} f(x) = \sum_{x=0}^1 x^{37} p^x (1-p)^{1-x} \\
+&=&
+\eeqn
+}\spc{2}
+
+\intermediatesubproblem{Using the definition of the mgf, find $M_X(t)$, the mgf for a Bernoulli r.v.}\spc{2}
+
+
+\hardsubproblem{Show that $\expe{X^{37}} = p$ using the mgf and the fact you proved in question 1(o). You may have to use English to explain what you're doing. I do not expect you to take 37 derivatives, but you should take at least two and see the pattern.}\spc{5}
+
+
+\hardsubproblem{Let $T \sim \binomial{n}{p}$. Find the mgf of $X$ using the definition of the mgf. You will need to invoke the binomial theorem here (see class notes). }\spc{4}
+
+
+\intermediatesubproblem{Using the fact you proved in 1(r), use mgf's to show that $T = X_1 + \ldots + X_n$ where $T$ is the binomial r.v. from the previous problem and $X_1, \ldots, X_n \iid \bernoulli{p}$. }\spc{3}
+
+
+
+
+\hardsubproblem{Show that the sum of two independent r.v.'s $T_1 \sim \binomial{n_1}{p}$ and $T_2 \sim \binomial{n_2}{p}$ is a new r.v. which itself is a binomial and find its parameters. Does this make sense given what you proved in (e)? }\spc{4}
+
+
+\easysubproblem{Let $X_1, \ldots, X_r \iid \geometric{p}$. We proved in class that the mgf for the geometric is:
+
+\beqn
+M_{X_i}(t) = \frac{pe^t}{1-(1-p) e^t}
+\eeqn
+
+Let $T = X_1 + \ldots + X_r$. We know from our study of discrete r.v.'s that $T \sim \negbin{r}{p}$ which was illustrated conceptually. However, this was never proven. We will prove it here. Using the fact that:
+
+\beqn
+M_T(t) = \tothepow{\frac{pe^t}{1-(1-p) e^t}}{r}
+\eeqn
+
+for the negative binomial r.v., show that negative binomial r.v.'s are indeed the sum of many $\iid$ geometric r.v.'s using the fact you proved in 1(r). This looks hard but it is marked easy, so I assure you: it is easy! (It is not easy if you do not have mgf's, really really not easy).  }\spc{4}
+
+\intermediatesubproblem{Show that the sum of two independent r.v.'s $T_1 \sim \negbin{r_1}{p}$ and $T_2 \sim \negbin{r_2}{p}$ is itself a negative binomial and find its parameters. }\spc{7}
+
+\hardsubproblem{Let $X \sim \poisson{\lambda}$ with mgf:
+
+\beqn
+M_X(t) = e^{\lambda (e^t - 1)}
+\eeqn
+
+Show that the sum of two independent r.v.'s $X_1 \sim \poisson{\lambda_1}$ and $X_2 \sim \poisson{\lambda_2}$ is itself a Poisson r.v. and find its parameter. You don't even need to know what the Poisson is for this question.}\spc{4}
+
+\hardsubproblem{You have shown previously that the mgf for the r.v. $X \sim \binomial{n}{p}$ was $M_X(t) = \tothepow{1-p+pe^t}{n}$. In the previous problem you were given the mgf for the r.v. $X \sim \poisson{\lambda}$ was $M_X(t) = e^{\lambda (e^t - 1)}$. Although we didn't cover it in class, the Poisson distribution is the limit of the Binomial distribution with $n \rightarrow \infty$ and the rate parameter pinned $\lambda = np$. Prove that the Poisson's mgf is this limit of the Binomial's mgf. Really not hard: just some algebraic manipulations. Let $p = \lambda / n$.}\spc{4}
+
+\intermediatesubproblem{We proved in class that if $Z \sim \stdnormnot$ then $M_Z(t) = e^{t^2/2}$. We also showed that if $X = \sigma Z + \mu$, then $X \sim \normnot{\mu}{\sigsq}$. Show that the mgf of $X$ is $M_X(t) = e^{\mu t + \sigsq t^2 /2}$ using what you learned in quesiton 1 and the class notes.  }\spc{4}
+
+\hardsubproblem{Let $X_1, X_2, \ldots, X_n$ be a sequence of independent normal random variables where $X_1$ has mean $\mu_1$ and variance $\sigsq_1$ and $X_2$ has mean $\mu_2$ and variance $\sigsq_2$, etc. Show that $X_1 + X_2 + \ldots + X_n$ is normally distributed and find its parameters.  }\spc{6}
+
+\extracreditsubproblem{Let $X \sim \exponential{\lambda}$ with mgf:
+
+\beqn
+M_X(t) = \frac{\lambda}{\lambda - t}
+\eeqn
+
+Demonstrate that the sum of $X_1, \ldots, X_n \iid \exponential{\lambda}$ is an Erlang r.v. with parameters $n$ and $\lambda$, the continuous analogue of the Negative Binomial r.v.  (You will need to look up the mgf of the Erlang distribution). Do on a separate piece of paper.}
+
+\extracreditsubproblem{The standard Cauchy distribution has center 0 and scale parameter 1 and its PDF is:
+
+\beqn
+f(x) = \oneover{\pi(1+x^2)}
+\eeqn
+
+The Cauchy distribution is a classic example of a pathological r.v. You'll see why. The standard Cauchy r.v. is actually the ratio of two independent standard normal r.v.'s: if $X \sim \stdnormnot$ and $Y \sim \stdnormnot$ then $X/Y$ has the PDF above.
+
+Prove that the mgf for a standard Cauchy r.v. does not exist. This is really not hard but it looks menacing. Do on a separate piece of paper. }
+
+\extracreditsubproblem{Prove $\Xbar \convd \mu$ which is a weak Law of Large Numbers. You will just need to copy from the class notes. Do on a separate piece of paper. }
+
+\end{enumerate}
+
+\iftoggle{professormode}{
+\paragraph{Central Limit Theorem} We will introduce it here and provide some illustrations.\\ \\
+} 
+
+\problem{We will now prove the \qu{Central Limit Theorem} (the CLT), the crown jewel of a college-level course on probability. I will not ask you to prove it on the exam, but I may ask you general questions about the proof. The best thing to do then, is to prove it yourself in which case you'll be prepared for basic questions. You will not be asked to do anything other than to critically read and synthesize the lecture notes.}
+
+\begin{enumerate}
+\intermediatesubproblem{We start by looking at r.v.'s $X_1, X_2, \ldots, X_n$. What are the assumptions on these r.v.'s? There are three.  }\spc{4}
+
+\easysubproblem{We started our proof examining $\Xbar_n$. What is $\expe{\Xbar_n}$?  }\spc{2}
+
+\easysubproblem{What is $\se{\Xbar_n}$. I'm marking this easy because you've done it before and it's in the notes.  }\spc{2}
+
+\easysubproblem{Below is its standardized form.
+
+\beqn
+C_n = \frac{\Xbar_n - \mu}{\frac{\sigma}{\sqrt{n}}}
+\eeqn
+
+If it's \qu{standardized,} what is the mean and standard error of $C_n$?  }\spc{2}
+
+\easysubproblem{Show that $C_n = \frac{Z_1}{\sqrt{n}} + \frac{Z_2}{\sqrt{n}} + \ldots + \frac{Z_n}{\sqrt{n}}$.  }\spc{3}
+
+\intermediatesubproblem{Find the first five terms of $e^{tZ}$ using the Taylor Series. You can put $+~\ldots$ after the five terms. This is the same thing you did in 1(g).  }\spc{4}
+
+\easysubproblem{Find the first five terms of $M_Z(t)$, the mgf of all the $Z_i$'s (which are $\iid$). This just means take the expectation of what you did in the previous problem since  $M_Z(t) := \expe{e^{tZ}}$ Remember: it's standardized! So you know something about the first two moments: $\expe{Z}$ and $\expe{Z^2}$. You can put $+~\ldots$ after the terms. The five terms in the mgf should have became four (since one term vanished conveniently).  }\spc{4}
+
+
+\easysubproblem{Using your answer to (h) and what you learned in 1(u), find the mgf of $Z/\sqrt{n}$ and denote it $M_{\frac{Z}{\sqrt{n}}}(t)$. Make sure you remember your fractional powers e.g. $(\sqrt{n})^3 = n^{3/2}$. I've marked this easy since I give away the hard part of the answer in the next question.  }\spc{4}
+
+\hardsubproblem{ Argue that the tail of $M_{\frac{Z}{\sqrt{n}}}(t)$ which should look like
+
+\beqn
+\text{tail} := \frac{t^3 \expe{Z^3}}{3! n^{3/2}} + \frac{t^4 \expe{Z^4}}{4!n^2} + ~\ldots
+\eeqn
+
+belongs to $\littleo{1/n}$ which means that
+
+\beqn
+\limitn \frac{\text{tail}}{\oneover{n}} = 0
+\eeqn
+
+which\textit{ in English} means that the tail drops to zero \textit{more quickly} than $\oneover{n}$. Remember, when you take a limit such as $\limitn$, the $t$'s and the $\expe{Z^k}$ terms are constants.  }\spc{4}
+
+\easysubproblem{Write $M_{\frac{Z}{\sqrt{n}}}(t)$ using \qu{little-o} notation using what you showed in the previous problem.  }\spc{4}
+
+\easysubproblem{Find the mgf of $C_n$ denoted $M_{C_n}(t)$ using the fact that you have the sum $n$ independent $\frac{Z_i}{\sqrt{n}}$ r.v.'s. Hint: answer looks something like what's in the next question.  }\spc{6}
+
+\extracreditsubproblem{Prove for any $c \in \reals$ that
+
+\beqn
+\limitn \tothepow{1 + \overn{c} + \littleo{\oneover{n}}}{n} = e^c
+\eeqn
+
+that is, show that additive terms that drop to zero more quickly than $1/n$ in the limit do not matter so they can be effectively ignored to arrive at the familiar limit:
+
+\beqn
+\limitn \tothepow{1 + \overn{c}}{n} = e^c
+\eeqn
+
+%I wasn't able to prove this. It has something to do with showing the following:
+%
+%\beqn
+%\limitn \abss{\tothepow{1 + \overn{c} + \littleo{\oneover{n}}}{n} - \tothepow{1 + \overn{c}}{n}} = 0
+%\eeqn
+
+I'm sure the answer is on Google somewhere! Do on a separate piece of paper.}
+
+\easysubproblem{Regardless of whether or not you proved the previous extra credit, use it \textbf{as fact} and show that the limiting mgf of $C$,
+
+\beqn
+M_C(t) := \limitn M_{C_n}(t)
+\eeqn
+
+has the same form as a standard normal mgf. This mgf is found in problem 2(l). Thus, since it has the same fingerprint, it must have the standard normal distribution! QED. }\spc{4.5}
+
+\easysubproblem{Congratulations: you have proved the most basic central limit theorem, the crown jewel of Math 241! Write a smiley face by the crown. }\spc{1}
+
+
+\iftoggle{professormode}{
+\begin{figure}[htp]
+\includegraphics[width=2in]{crown.jpg}
+\end{figure}  
+} 
+
+
+
+\end{enumerate}
+
+\problem{We've now proven the CLT, but you may not viscerally feel it yet since all you did is just a bunch of math in bilateral Laplace transform space (which doesn't exactly exalt the spirit). This problem is here to make you really understand the power of this technology. This is a preview to confidence intervals and hypothesis testing which will be the topics of the remainder of this course.}
+
+\begin{enumerate}
+\easysubproblem{Image $X \sim \bernoulli{\half}$. Run the following code in \texttt{R} and print out (in black and white) the result of the following. Does this look like the PMF of $X$? }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(1, 1))
+N = 10000
+xs = rbinom(N, 1, 0.5)
+h = hist(xs, breaks = 100, plot = FALSE)
+h$counts = h$counts / sum(h$counts)
+plot(h)
+#last line placeholder
+\end{verbatim}
+
+
+\easysubproblem{Now we're going to imagine $X_1, \ldots, X_n \iid \bernoulli{p = 0.5}$ and compute our friend:
+
+\beqn
+C_n = \sqrt{n} \Zbar = \frac{\Xbar - \mu}{\frac{\sigma}{\sqrt{n}}}
+\eeqn
+
+Since we know $\mu = p = 0.5$ and $\sigma = \sqrt{p(1-p)} = \sqrt{0.5 (1 - 0.5)} = 0.5$,
+
+\beqn
+C_n =  \frac{\Xbar - 0.5}{\frac{0.5}{\sqrt{n}}}
+\eeqn
+
+We are going to look at the distribution of $C_n$ for different values of $n$. Remember $C = \limitn C_n$ should be distributed as $\stdnormnot$. Run the following code in \texttt{R} and print out (in black and white) the result (please be patient):
+
+This will look at the estimated PDF for $C_n$ for $n = 10, 100, 1000, 5000, 10000, 50000$. At what $n$ value does it appear that $C_n$ converged to a $\stdnormnot$? Pay attention to gaps of whitespace in these plots. They mean there's no support there! The standard normal has support everywhere. If it never converges, write \qu{never.} }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(3, 2))
+N = 10000
+mu = 0.5
+sigma = 0.5
+for (n in c(10, 100, 1000, 5000, 10000, 50000)){
+  xs = matrix(rbinom(n * N, 1, mu), ncol = N)
+  xbars = (colMeans(xs) - mu) / (sigma / sqrt(n))
+  hist(xbars, breaks = 100, xlim = c(-4, 4), 
+    main = paste("PDF estimate of Cn for n =", n), col = "blue")
+}
+#last line placeholder
+\end{verbatim}~\spc{1}
+
+\easysubproblem{Now we're going to imagine $X_1, \ldots, X_n \iid \bernoulli{p = 0.1}$ which is more skewed towards failures. Since we know $\mu = p = 0.1$ and $\sigma = \sqrt{p(1-p)} = \sqrt{0.1 (1 - 0.1)} = 0.3$,
+
+\beqn
+C_n =  \frac{\Xbar - 0.1}{\frac{0.3}{\sqrt{n}}}
+\eeqn
+
+We are going to look at the distribution of $C_n$ for different values of $n$. Remember $C = \limitn C_n$ should be distributed as $\stdnormnot$. Run the following code in \texttt{R} and print out (in black and white) the result (please be patient).
+
+This will look at the estimated PDF for $C_n$ for $n = 10, 100, 1000, 5000, 10000, 50000$. At what $n$ value does it appear that $C_n$ converged to a $\stdnormnot$? Pay attention to gaps of whitespace in these plots. They mean there's no support there! The standard normal has support everywhere. If it never converges, write \qu{never.} }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(3, 2))
+N = 10000
+mu = 0.1
+sigma = 0.3
+for (n in c(10, 100, 1000, 5000, 10000, 50000)){
+  xs = matrix(rbinom(n * N, 1, mu), ncol = N)
+  xbars = (colMeans(xs) - mu) / (sigma / sqrt(n))
+  hist(xbars, breaks = 100, xlim = c(-4, 4), 
+    main = paste("PDF estimate of Cn for n =", n), col = "blue")
+}
+#last line placeholder
+\end{verbatim}
+~\spc{2}
+
+
+\easysubproblem{Now we're going to imagine $X_1, \ldots, X_n \iid \binomial{n = 100}{p = 0.5}$. Since we know $\mu = np = 50$ and $\sigma = \sqrt{np(1-p)} = \sqrt{100 (0.5) (1 - 0.5)} = 5$,
+
+\beqn
+C_n =  \frac{\Xbar - 50}{\frac{5}{\sqrt{n}}}
+\eeqn
+
+We are going to look at the distribution of $C_n$ for different values of $n$. Remember $C = \limitn C_n$ should be distributed as $\stdnormnot$. Run the following code in \texttt{R} and print out (in black and white) the result (please be patient).
+
+This will look at the estimated PDF for $C_n$ for $n = 10, 100, 1000, 5000$. At what $n$ value does it appear that $C_n$ converged to a $\stdnormnot$? Pay attention to gaps of whitespace in these plots. They mean there's no support there! The standard normal has support everywhere. If it never converges, write \qu{never.} \\ }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(2, 2))
+N = 10000
+mu = 50
+sigma = 5
+for (n in c(10, 100, 1000, 5000)){
+  xs = matrix(rbinom(n * N, 100, 0.5), ncol = N)
+  xbars = (colMeans(xs) - mu) / (sigma / sqrt(n))
+  hist(xbars, breaks = 100, xlim = c(-4, 4), 
+    main = paste("PDF estimate of Cn for n =", n), col = "blue")
+}
+#last line placeholder
+\end{verbatim}~\spc{5}
+
+\easysubproblem{Now we're going to imagine $X_1, \ldots, X_n \iid \poisson{\lambda = 7}$. Since we know $\mu = \lambda = 7$ and $\sigma = \sqrt{\lambda} = \sqrt{7} = 2.6458$,
+
+\beqn
+C_n =  \frac{\Xbar - 7}{\frac{2.6458}{\sqrt{n}}}
+\eeqn
+
+We are going to look at the distribution of $C_n$ for different values of $n$. Remember $C = \limitn C_n$ should be distributed as $\stdnormnot$. Run the following code in \texttt{R} and print out (in black and white) the result (please be patient).
+
+This will look at the estimated PDF for $C_n$ for $n = 10, 100, 1000, 5000, 10000, 50000$. At what $n$ value does it appear that $C_n$ converged to a $\stdnormnot$? Pay attention to gaps of whitespace in these plots. They mean there's no support there! The standard normal has support everywhere. If it never converges, write \qu{never.} } \pagebreak
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(3, 2))
+N = 10000
+mu = 7
+sigma = 2.6458
+for (n in c(10, 100, 1000, 5000, 10000, 50000)){
+  xs = matrix(rpois(n * N, mu), ncol = N)
+  xbars = (colMeans(xs) - mu) / (sigma / sqrt(n))
+  hist(xbars, breaks = 100, xlim = c(-4, 4), 
+    main = paste("PDF estimate of Cn for n =", n), col = "blue")
+}
+#last line placeholder
+\end{verbatim}~\spc{1}
+
+
+\easysubproblem{Now we're going to imagine $X_1, \ldots, X_n \iid \exponential{\lambda = 7}$. Since we know $\mu = 1 / \lambda = 0.1429$ and $\sigma = 1 / \lambda =  0.1429$,
+
+\beqn
+C_n =  \frac{\Xbar - 0.1429}{\frac{0.1429}{\sqrt{n}}}
+\eeqn
+
+We are going to look at the distribution of $C_n$ for different values of $n$. Remember $C = \limitn C_n$ should be distributed as $\stdnormnot$. Run the following code in \texttt{R} and print out (in black and white) the result (please be patient).
+
+This will look at the estimated PDF for $C_n$ for $n = 10, 100, 1000, 5000$. At what $n$ value does it appear that $C_n$ converged to a $\stdnormnot$? Pay attention to gaps of whitespace in these plots. They mean there's no support there! The standard normal has support everywhere. If it never converges, write \qu{never.} }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(2, 2))
+N = 10000
+mu = 0.1429
+sigma = 0.1429
+for (n in c(10, 100, 1000, 5000)){
+  xs = matrix(rexp(n * N, 7), ncol = N)
+  xbars = (colMeans(xs) - mu) / (sigma / sqrt(n))
+  hist(xbars, breaks = 100, xlim = c(-4, 4), 
+    main = paste("PDF estimate of Cn for n =", n), col = "blue")
+}
+#last line placeholder
+\end{verbatim}
+
+\easysubproblem{Now we're going to imagine $X_1, \ldots, X_n \iid \normnot{\mu = 3}{\sigsq = 6^2}$. Since we know $\mu = 3$ and $\sigma = 6$,
+
+\beqn
+C_n =  \frac{\Xbar - 3}{\frac{6}{\sqrt{n}}}
+\eeqn
+
+We are going to look at the distribution of $C_n$ for different values of $n$. Remember $C = \limitn C_n$ should be distributed as $\stdnormnot$. Run the following code in \texttt{R} and print out (in black and white) the result (please be patient).
+
+This will look at the estimated PDF for $C_n$ for $n = 10, 100, 1000, 5000$. At what $n$ value does it appear that $C_n$ converged to a $\stdnormnot$? Pay attention to gaps of whitespace in these plots. They mean there's no support there! The standard normal has support everywhere. If it never converges, write \qu{never.} }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(2, 2))
+N = 10000
+mu = 3
+sigma = 6
+for (n in c(10, 100, 1000, 5000)){
+  xs = matrix(rnorm(n * N, 3, 6), ncol = N)
+  xbars = (colMeans(xs) - mu) / (sigma / sqrt(n))
+  hist(xbars, breaks = 100, xlim = c(-4, 4), 
+    main = paste("PDF estimate of Cn for n =", n), col = "blue")
+}
+#last line placeholder
+\end{verbatim}~\spc{1}
+
+\intermediatesubproblem{Why did this converge immediately? See question 2(m) for the answer. }\spc{2}
+
+\easysubproblem{Now we're going to get more elaborate. Imagine the following PDF: 
+
+I will consider this to be called the \qu{bathtub function.} This is not a real brand name distribution. I just made it up and it won't be on the test. Write about why you think I called it the \qu{bathtub function.} Does this look like a bell curve at all?? }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(1, 1))
+N = 10000
+xs = 100 * rbeta(N, 0.1, 0.1)
+h = hist(xs, breaks = 1000, plot = FALSE)
+h$counts = h$counts / sum(h$counts)
+plot(h)
+#last line placeholder
+\end{verbatim}~\spc{2}
+
+\easysubproblem{Now we're going to make sure the central limit theorem works even with stuff that's as crazy as the bathtub. Imagine $X_1, \ldots, X_n \iid \text{bathtub}$. By advanced math, I know $\mu = 50$ and $\sigma = 45.6436$ thus,
+
+\beqn
+C_n =  \frac{\Xbar - 50}{\frac{45.6436}{\sqrt{n}}}
+\eeqn
+
+We are going to look at the distribution of $C_n$ for different values of $n$. Remember $C = \limitn C_n$ should be distributed as $\stdnormnot$. Run the following code in \texttt{R} and print out (in black and white) the result (please be patient).
+
+This will look at the estimated PDF for $C_n$ for $n = 2, 5, 10, 50, 100, 1000$. At what $n$ value does it appear that $C_n$ converged to a $\stdnormnot$? Pay attention to gaps of whitespace in these plots. They mean there's no support there! The standard normal has support everywhere. If it never converges, write \qu{never.} }
+
+\begin{verbatim}
+#first line placeholder
+par(mfrow = c(3, 2))
+N = 10000
+mu = 50
+sigma = 45.6436
+for (n in c(2, 5, 10, 50, 100, 1000)){
+  xs = matrix(100 * rbeta(n * N, 0.1, 0.1), ncol = N)
+  xbars = (colMeans(xs) - mu) / (sigma / sqrt(n))
+  hist(xbars, breaks = 100, xlim = c(-4, 4), 
+    main = paste("PDF estimate of Cn for n =", n), col = "blue")
+}
+#last line placeholder
+\end{verbatim}
+
+\easysubproblem{Let's sum up what we've learned in this problem. The central limit states as $n \rightarrow \infty$ (i.e. it gets big) then $C_n$ becomes a standard normal. Does it become a standard normal at different rates depending on the distribution of the r.v. being sampled? Yes/no is fine.} \spc{2}
+
+\end{enumerate}
+
+\problem{Now that we've now proven the CLT, we are going to use it a little bit. Assume $X_1, \ldots, X_n \iid$ something with mean $\mu$ and standard error $\sigma$.}
+
+\begin{enumerate}
+
+\easysubproblem{Assume $n$ is large enough for the CLT to kick in, show that:
+
+\beqn
+\Xbar \sim \normnot{\mu}{\squared{\frac{\sigma}{\sqrt{n}}}}
+\eeqn }\spc{1.5}
+
+\easysubproblem{Assume $n$ is large enough for the CLT to kick in, show that:
+
+\beqn
+T_n \sim \normnot{n\mu}{\squared{\sqrt{n}\sigma}}
+\eeqn }\spc{1.5}
+
+
+\easysubproblem{Let $X_1, \ldots, X_n \iid \bernoulli{p}$ and let $\Phat := \Xbar$. Assume $n$ is large enough for the CLT to kick in, show that:
+
+\beqn
+\Phat \sim \normnot{p}{\squared{\sqrt{\frac{p(1-p))}{n}}}}
+\eeqn }\spc{1.5}
+
+\end{enumerate}
+\end{document}

@@ -35,6 +35,7 @@ My lectures can be listened to as clyp.it tracks [(all lectures)](https://clyp.i
 
 ## Homeworks
 
+* Homework 8 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw08/hw08.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw08/hw08.pdf) (due 12/2/16)
 * Homework 7 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw07/hw07.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw07/hw07.pdf) (due 11/23/16)
 * Homework 6 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw06/hw06.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw06/hw06.pdf) (due 11/11/16)
 * Homework 5 [(download)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf?raw=true) [(view)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/homeworks/hw05/hw05.pdf) (due 10/27/16)
