@@ -47,7 +47,9 @@ My lectures can be listened to as clyp.it tracks [(all lectures)](https://clyp.i
 
 ## Exams
 
+* Midterm I September 22 (in class). 
 
+[(exam)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1.pdf) [(exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1_solutions.pdf)
 * Midterm I September 22 (in class). 
 
 [(exam)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1.pdf) [(exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1_solutions.pdf)
@@ -57,6 +59,8 @@ My lectures can be listened to as clyp.it tracks [(all lectures)](https://clyp.i
 [(exam)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm2/midterm2.pdf) [(exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm2/midterm2_solutions.pdf)
 
 * Final
+
+[(exam)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/final/final.pdf) [(exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/final/final_solutions.pdf)
 
 ## Practice Exams
 
