@@ -50,9 +50,6 @@ My lectures can be listened to as clyp.it tracks [(all lectures)](https://clyp.i
 * Midterm I September 22 (in class). 
 
 [(exam)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1.pdf) [(exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1_solutions.pdf)
-* Midterm I September 22 (in class). 
-
-[(exam)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1.pdf) [(exam solutions)](https://github.com/kapelner/QC_Math_241_Fall_2016/blob/master/exams/midterm1/midterm1_solutions.pdf)
 
 * Midterm II November 15 (in class). 
 
